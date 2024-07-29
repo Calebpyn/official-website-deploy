@@ -4,7 +4,6 @@
 import { PresentationCardType } from "../../types/common/PresentationCardTypes";
 
 //Imports
-import { useState } from "react";
 
 //Translation
 import { useTranslation } from "react-i18next";
@@ -24,7 +23,6 @@ const PresentationCard: React.FC<PresentationCardType> = ({
   content,
   phone,
   mail,
-  external_links,
 }) => {
   //Translation
   const { t } = useTranslation();

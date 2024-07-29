@@ -17,7 +17,7 @@ function Section1() {
   const { t } = useTranslation();
 
   //Video options
-  const [videoOpts, setVideoOpts] = useState<videoType>({
+  const [videoOpts] = useState<videoType>({
     videoId: "i8e6LjAnoRM",
     width: "500",
     height: "300",

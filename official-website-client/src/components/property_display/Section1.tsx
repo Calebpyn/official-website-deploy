@@ -18,20 +18,20 @@ function Section1() {
   const {t, i18n} = useTranslation()
 
   //Phone Numbers
-  const [phoneNumbers, setPhoneNumbers] = useState({
+  const [phoneNumbers] = useState({
     mx: "MX (646) 183-9897",
     usa: "US (760) 315-576",
   });
 
   //Description info
-  const [info, setInfo] = useState({content_es: "Fully Furnished home available For Rent in Ensenada BC. (North side).\nLong term or 6 months\nIdeal for up to 2 persons.\n2 bedrooms\n1 full bath\n1 half bath\nPatio\nIn a great neighborhood and close to stores and cafes.\nSorry no Pets\nPlease pm for further details."
+  const [info] = useState({content_es: "Fully Furnished home available For Rent in Ensenada BC. (North side).\nLong term or 6 months\nIdeal for up to 2 persons.\n2 bedrooms\n1 full bath\n1 half bath\nPatio\nIn a great neighborhood and close to stores and cafes.\nSorry no Pets\nPlease pm for further details."
   })
 
   //Fromated content
   const formattedContent = info.content_es.replace(/\n/g, "<br />");
 
   //Price
-  const [price, setPrice] = useState({
+  const [price] = useState({
     mx: "20,000.00 mx",
     us: "1,000.00 us"
   })

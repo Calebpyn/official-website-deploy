@@ -16,10 +16,10 @@ import { useEffect } from "react";
 
 function PropertyDisplay() {
   //Translation
-  const { t } = useTranslation();
+  const { } = useTranslation();
 
   //Params
-  const { id } = useParams();
+  const { } = useParams();
 
   //Scroll to top
   useEffect(() => {

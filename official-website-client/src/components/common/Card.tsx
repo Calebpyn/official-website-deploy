@@ -18,7 +18,7 @@ const Card: React.FC<cardType> = ({ width, height, redirect, image, text }) => {
   const {t} = useTranslation()
 
   //Props state
-  const [cardOptions, setCardOptions] = useState<cardType>({
+  const [cardOptions] = useState<cardType>({
     width: width,
     height: height,
     redirect: redirect,

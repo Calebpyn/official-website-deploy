@@ -14,7 +14,6 @@ const PropertyCard: React.FC<propertyCardType> = ({
   title,
   width,
   for_sale,
-  pets,
 }) => {
   //Translation
   const { t, i18n } = useTranslation();
@@ -52,7 +51,10 @@ const PropertyCard: React.FC<propertyCardType> = ({
         </span>
         <span className="-ml-2">
           {atts.map((item, idx) => (
-            <span key={idx} className="px-2 text-zinc-400 border-r-zinc-400 border-r-[1px]">
+            <span
+              key={idx}
+              className="px-2 text-zinc-400 border-r-zinc-400 border-r-[1px]"
+            >
               {i18n.language == "es"
                 ? item.es
                 : i18n.language == "en"

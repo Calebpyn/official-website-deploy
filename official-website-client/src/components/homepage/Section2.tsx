@@ -15,14 +15,14 @@ import { useState } from "react"
 import { cardOptions } from "../../types/homepage/Section2Types"
 
 //Translation
-import { useTranslation } from "react-i18next"
+// import { useTranslation } from "react-i18next"
 
 function Section2() {
 
     //Translation
-    const {t} = useTranslation()
+    // const {t} = useTranslation()
 
-    const [cardOptions, setCardOptions] = useState<cardOptions>({
+    const [cardOptions] = useState<cardOptions>({
         width: "300",
         height: "400"
     })

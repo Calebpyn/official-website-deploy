@@ -20,7 +20,7 @@ function Section1() {
   const { t } = useTranslation();
 
   //Carousel assets state
-  const [carouselImgs, setCarouselImgs] = useState<Array<string>>([
+  const [carouselImgs] = useState<Array<string>>([
     carousel_aaset1,
     carousel_aaset2,
     carousel_aaset3,
