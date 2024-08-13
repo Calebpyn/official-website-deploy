@@ -9,7 +9,7 @@ import asset2 from "../../assets/homepage/section2-asset-2.png";
 import asset3 from "../../assets/homepage/section2-asset-3.png";
 
 //Imports
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 //Types
 import { cardOptions } from "../../types/homepage/Section2Types";
