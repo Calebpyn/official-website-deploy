@@ -11,10 +11,11 @@ import carousel_aaset6 from "../../assets/relocation/carousel/asset_carousel_6.p
 import carousel_aaset7 from "../../assets/relocation/carousel/asset_carousel_7.png";
 
 //Imports
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //Translation
 import { useTranslation } from "react-i18next";
+import { carouselType } from "../../types/common/CarouselTypes";
 
 function Section1() {
   const { t } = useTranslation();
@@ -30,9 +31,25 @@ function Section1() {
     carousel_aaset7,
   ]);
 
+  const [carouselOpts, setCarouselOpts] = useState<carouselType>({
+    imgArray: carouselImgs,
+    width: "450",
+    height: "700"
+  })
+
+  useEffect(() => {
+    if(window.innerWidth < 768){
+      setCarouselOpts({
+        ...carouselOpts,
+        width: "250",
+        height: "310"
+      })
+    }
+  }, [])
+
   return (
-    <div className="py-10 w-full flex justify-center items-center bg-white">
-      <div className="w-[30%] flex flex-col justify-start items-start mr-10 gap-5">
+    <div className="py-10 w-full flex justify-center items-center bg-white md:flex-row flex-col">
+      <div className="md:w-[30%] px-5 mb-8 md:mb-0 md:px-0 flex flex-col justify-start items-start mr-10 gap-5">
         <div className="w-full flex justify-start items-center">
           <span className="text-[#FF9B3B]">{t("coming_to_baja")}</span>
         </div>
@@ -69,7 +86,7 @@ function Section1() {
           </p>
         </div>
       </div>
-      <Carousel imgArray={carouselImgs} width="450" height="700" />
+      <Carousel imgArray={carouselOpts.imgArray} width={carouselOpts.width} height={carouselOpts.height} />
     </div>
   );
 }

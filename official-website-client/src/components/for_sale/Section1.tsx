@@ -3,79 +3,70 @@
 //Components
 import PropertyCard from "../common/PropertyCard";
 
-//Assets
-import example_1 from "../../assets/for_sale/mocks/example_1.jpg";
+//Mui
+import CircularProgress from "@mui/material/CircularProgress";
+
+//Axios
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { propertyDisplayType } from "../../types/for_sale/PropertyInfo";
 
 function Section1() {
-  return (
-    <div className="w-full bg-white p-5 flex-wrap flex justify-around">
-      <PropertyCard
-        atts={[
-          {
-            en: "2 Bed",
-            es: "2 Camas",
-          },
-          {
-            en: "1 Bath",
-            es: "1 Baño",
-          },
-          {
-            en: "1 Kitchen",
-            es: "1 Cocina",
-          },
-          {
-            en: "Patio",
-            es: "Patio",
-          },
-        ]}
-        description={{
-          es: "Casa completamente amueblada disponible para rentar en Ensenada, BC.",
-          en: "Fully Furnished home available For Rent in Ensenada BC.",
-        }}
-        img={example_1}
-        price={{ mx: "2,000,000 mx", us: "100,000 us" }}
-        title={{
-          es: "CASA EN LA BAHÍA",
-          en: "BAY HOUSE",
-        }}
-        width="600"
-        for_sale={true}
-        pets={false}
-      />
+  //All for sale properties state
+  const [allProperties, setAllProperties] = useState<propertyDisplayType[]>([]);
 
-<PropertyCard
-        atts={[
-          {
-            en: "2 Bed",
-            es: "2 Camas",
-          },
-          {
-            en: "1 Bath",
-            es: "1 Baño",
-          },
-          {
-            en: "1 Kitchen",
-            es: "1 Cocina",
-          },
-          {
-            en: "Patio",
-            es: "Patio",
-          },
-        ]}
-        description={{
-          es: "Casa completamente amueblada disponible para rentar en Ensenada, BC.",
-          en: "Fully Furnished home available For Rent in Ensenada BC.",
-        }}
-        img={example_1}
-        price={{ mx: "2,000,000 mx", us: "100,000 us" }}
-        title={{
-          es: "CASA EN LA BAHÍA",
-          en: "BAY HOUSE",
-        }}
-        width="600"
-        for_sale={false}
-        pets={false}
-      />
+  //Loading State
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  //GET all properties for sale
+  const handleAllForSale = async () => {
+    setIsLoading(true);
+    const response = await axios
+      .get(`${import.meta.env.VITE_REACT_APP_API_URL}/for_sale`)
+      .catch((err) => {
+        console.log(err, "axios error");
+        alert("Something went wrong...");
+      });
+    setAllProperties(response!.data);
+    setIsLoading(false);
+  };
+
+  //Initial fetch
+  useEffect(() => {
+    handleAllForSale();
+  }, []);
+
+  return (
+    <div className="w-full bg-white">
+      {isLoading ? (
+        <div className="h-[300px] w-full flex justify-center items-center">
+          <CircularProgress />
+        </div>
+      ) : (
+        <div className="w-full bg-white p-5 flex-wrap flex justify-around">
+          {allProperties.map((item: propertyDisplayType) => (
+            <PropertyCard
+              id={item.id}
+              key={item.id}
+              atts={item.atts}
+              description={{
+                es: item.desc_es,
+                en: item.desc,
+              }}
+              img={item.images[0]}
+              price={item.price}
+              currency={item.currency}
+              title={{
+                es: item.name_es,
+                en: item.name,
+              }}
+              width="600"
+              for_sale={true}
+              pets={true}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

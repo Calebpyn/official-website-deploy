@@ -38,15 +38,15 @@ const Carousel: React.FC<carouselType> = ({ imgArray, width, height }) => {
   return (
     <div
       className="flex flex-col justify-between items-center"
-      style={{ width: `${width}px`, height: `${parseInt(height) + 30}px` }}
+      style={{ maxWidth: `${width}px`, height: `${parseInt(height) + 30}px` }}
     >
       <div
-        className="bg-black overflow-scroll flex"
-        style={{ width: `${width}px`, height: `${height}px` }}
+        className="bg-black overflow-hidden flex"
+        style={{ maxWidth: `${width}px`, height: `${height}px` }}
       >
         <div
           className={`flex tr`}
-          style={{ width: `${parseInt(width) * imgArray.length}` , translate: `-${carouselPosition}px`}}
+          style={{ maxWidth: `${parseInt(width) * imgArray.length}` , translate: `-${carouselPosition}px`}}
         >
           {imgArray.map((img, idx) => (
             <div

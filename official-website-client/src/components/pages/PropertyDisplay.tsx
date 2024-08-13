@@ -15,11 +15,12 @@ import mainFooter from "../../assets/property_display/footer-asset-1.png";
 import { useEffect } from "react";
 
 function PropertyDisplay() {
-  //Translation
-  const { } = useTranslation();
 
   //Params
-  const { } = useParams();
+  const { id } = useParams<{ id: string }>();
+
+  //Translation
+  const {} = useTranslation();
 
   //Scroll to top
   useEffect(() => {
@@ -28,7 +29,7 @@ function PropertyDisplay() {
 
   return (
     <div className="w-full">
-      <Section1 />
+      <Section1 id={id!}/>
       <Footer img={mainFooter} />
     </div>
   );

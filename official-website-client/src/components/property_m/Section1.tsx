@@ -11,8 +11,8 @@ function Section1() {
     const {t} = useTranslation()
   return (
     <div className="w-full flex justify-center items-center bg-white p-10">
-        <div className="flex justify-center items-center gap-10">
-            <div className="flex flex-col gap-5 w-[50%]">
+        <div className="flex justify-center items-center gap-10 flex-col md:flex-row">
+            <div className="flex flex-col gap-5 md:w-[50%] w-[90%]">
                 <span className="text-4xl">
                     {t('for_homeowners')}
                 </span>

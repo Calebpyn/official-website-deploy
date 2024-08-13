@@ -17,7 +17,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 
 const PresentationCard: React.FC<PresentationCardType> = ({
-  width,
   title,
   image,
   content,
@@ -29,8 +28,7 @@ const PresentationCard: React.FC<PresentationCardType> = ({
 
   return (
     <div
-      className="bg-white shadow-lg rounded-lg p-5 flex flex-col justify-start items-center gap-4"
-      style={{ width: `${width}px` }}
+      className="bg-white shadow-lg rounded-lg p-5 flex flex-col justify-start items-center gap-4 w-full"
     >
       <div className="w-full flex justify-center items-center">
         <span className="text-xl font-semibold">{t(`${title}`)}</span>

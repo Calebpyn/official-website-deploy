@@ -20,10 +20,10 @@ const Footer: React.FC<footerType> = ({img}) => {
 
         </div>
 
-        <div className="h-[100px] bg-[#072C4F] flex justify-end items-center w-full pr-28 gap-3 text-white">
+        <div className="h-[100px] bg-[#072C4F] flex justify-end items-center w-full pr-28 gap-3 text-white text-xs">
             <span>"{t('all_rights')}"</span>
             <div className="h-[5px] w-[5px] bg-[#E6A146]"></div>
-            <span className="flex items-center"><FaRegCopyright className="mr-2 text-[#E6A146]"/>2023</span>
+            <span className="flex items-center"><FaRegCopyright className="md:mr-2 text-[#E6A146]"/>2023</span>
         </div>
     </div>
   )

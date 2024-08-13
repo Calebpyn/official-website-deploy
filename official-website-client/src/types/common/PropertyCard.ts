@@ -2,17 +2,15 @@ export type propertyCardType = {
     title: titleType,
     img: string,
     description: descriptionTtile,
-    price: priceType,
+    price: string,
+    currency: string,
     atts: Array<attType>
     width: string
     for_sale: boolean
     pets: boolean
+    id: string
 }
 
-type priceType = {
-    mx: string,
-    us: string
-}
 
 type titleType = {
     es: string

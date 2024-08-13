@@ -1,5 +1,4 @@
 export type PresentationCardType = {
-  width: string;
   title: string;
   image: string;
   content: string;

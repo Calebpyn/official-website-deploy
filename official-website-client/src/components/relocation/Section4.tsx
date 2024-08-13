@@ -11,7 +11,7 @@ function Section4() {
         <div><HReview content="review_4" reviewer="CAROL LAUMEN" width="800"/></div>
       </div>
 
-      <div className="flex justify-center items-start py-10 gap-2">
+      <div className="flex justify-center md:items-start py-10 gap-4 md:gap-2 md:flex-row flex-col items-center">
         <div>
           <BasicReview content="review_1" reviewer="FRED HAGAN" width="400" />
         </div>

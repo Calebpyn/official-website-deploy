@@ -16,8 +16,8 @@ const BasicHeroV2: React.FC<basicHeroV2Type> = ({ img, title }) => {
         className="w-full h-[150px] bg-top bg-cover"
         style={{ backgroundImage: `url('${img}')` }}
       >
-        <div className="w-full h-full bg-[#1A5994] bg-opacity-50 flex justify-center items-center">
-          <span className="text-5xl font-bold text-white">{t(`${title}`)}</span>
+        <div className="w-full h-full bg-[#1A5994] bg-opacity-50 flex justify-center items-center px-3 sm:px-0">
+          <span className="md:text-5xl text-2xl font-bold text-white">{t(`${title}`)}</span>
         </div>
       </div>
     </div>

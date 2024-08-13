@@ -1,6 +1,7 @@
 //Description: This is the information display card for properties, works for listings
 
 //Types
+import { useNavigate } from "react-router-dom";
 import { propertyCardType } from "../../types/common/PropertyCard";
 
 //Translation
@@ -8,19 +9,42 @@ import { useTranslation } from "react-i18next";
 
 const PropertyCard: React.FC<propertyCardType> = ({
   atts,
+  id,
   description,
   img,
   price,
+  currency,
   title,
   width,
   for_sale,
 }) => {
   //Translation
   const { t, i18n } = useTranslation();
+
+  //Navigation
+  const navigate = useNavigate();
+
+  //Price format
+  function convertStringToFormattedFloat(value: string): string {
+    // Parse the string to a float
+    const floatValue = parseFloat(value);
+
+    // Check if parsing was successful
+    if (isNaN(floatValue)) {
+      throw new Error("Invalid input string");
+    }
+
+    // Format the float to two decimal places and add commas
+    return floatValue.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  }
   return (
     <div
-      className="flex flex-col justify-start items-center p-5 gap-2"
+      className="flex flex-col justify-start items-center p-5 gap-2 hover:scale-105 tr cursor-pointer hover:shadow-lg rounded-md"
       style={{ width: `${width}px` }}
+      onClick={() => navigate(`/real_estate/${id}`)}
     >
       <span className="w-full flex justify-start items-center text-2xl">
         {i18n.language == "es"
@@ -30,7 +54,9 @@ const PropertyCard: React.FC<propertyCardType> = ({
           : null}
       </span>
 
-      <img src={img} className="w-full rounded-md" />
+      <div className="h-[300px] overflow-hidden flex justify-center items-center">
+        <img src={img} className="w-full rounded-md" />
+      </div>
 
       <div className="w-full flex justify-start items-start pl-3 flex-col gap-2">
         <span className="text-sm text-zinc-700">
@@ -41,12 +67,7 @@ const PropertyCard: React.FC<propertyCardType> = ({
             : null}
         </span>
         <span className="text-[#064A8D] font-semibold text-2xl">
-          $
-          {i18n.language == "es"
-            ? price.mx
-            : i18n.language == "en"
-            ? price.us
-            : null}
+          ${convertStringToFormattedFloat(price)} {currency}
           {for_sale ? null : ` ${t("per_month")}`}
         </span>
         <span className="-ml-2">

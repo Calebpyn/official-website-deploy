@@ -16,19 +16,21 @@ const HReview: React.FC<basicReview> = ({ content, reviewer, width }) => {
 
   return (
     <div
-      className="flex items-center justify-between"
-      style={{ width: `${width}px` }}
+      className="flex md:items-center justify-between md:flex-row flex-col-reverse items-start px-3"
+      style={{ maxWidth: `${width}px` }}
     >
-      <div>
-        <span className="text-[#112D5E] font-bold pt-5 text-xs text-nowrap">{reviewer}</span>
-      </div>
-      <div className="px-5 min-w-[100px]">
-        <img src={logo} className="h-[60px] rounded-full w-[60px]" />
+      <div className="flex md:flex-row items-center mt-5 self-end md:self-center">
+        <div>
+          <span className="text-[#112D5E] font-bold pt-5 text-xs text-nowrap">
+            {reviewer}
+          </span>
+        </div>
+        <div className="md:px-5 md:min-w-[100px] ml-5 md:mr-5">
+          <img src={logo} className="h-[60px] rounded-full w-[60px]" />
+        </div>
       </div>
 
-      <div
-        className="flex flex-col"
-      >
+      <div className="flex flex-col">
         <span className="text-[#112D5E] font-serif">{t(`${content}`)}</span>
       </div>
     </div>

@@ -18,7 +18,7 @@ function Section3() {
       className="w-full h-auto bg-center bg-cover flex justify-center items-center"
       style={{ backgroundImage: `url('${bgMain}')` }}
     >
-      <div className="p-20 bg-white bg-opacity-60 flex flex-col gap-5">
+      <div className="md:p-20 p-5 bg-white bg-opacity-60 flex flex-col gap-5">
         <div>
           <span className="text-[#EC6E30] font-bold text-lg">
             {t("coming_to_baja")}
