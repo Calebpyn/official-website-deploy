@@ -1,4 +1,4 @@
-import React from "react";
+
 import TikTokEmbed from "../common/TikTokEmbed";
 
 function Section6() {
