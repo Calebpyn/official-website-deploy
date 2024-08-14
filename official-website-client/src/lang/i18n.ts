@@ -30,6 +30,13 @@ const resources = {
       //- Section1
       section_text:
         "We would be more than happy to work with you and for you to be another satisfied client.",
+      //- Section 5
+      tilte_section5: "Are you planning to move?",
+      content_section5:
+        "GV BAJA SERVICES is a company that has always gone that extra mile for our clients. Always trying to find the best way, the best answer and solution to whatever situation they find themselves in.  GV Baja Services has a very personal relationship with each client, you become a friend. We strive to show our clients through the quality of our service, how much we value them, hoping that at the end of the process with us, they pass on from being our friend to part of our family. The warmth of this Country embraces you through caring actions and we look out for our clients’ best interests which has been our top priority for over 10 years. Please take the time to read our wonderful reviews and feel free to contact us for further information on any of our services.",
+      muchas_gracias: "Muchas Gracias,",
+      sign: "Gabriela Victorica Hurtado: CEO GV Baja Services",
+      lets_talk: "LET'S TALK",
 
       //- No need for Section 2
 
@@ -189,6 +196,13 @@ const resources = {
       //- Section1
       section_text:
         "Estaremos más que felices de trabajar contigo y que seas otro cliente satisfecho.",
+      //- Section5
+      tilte_section5: "¿Estás planeando mudarte?",
+      content_section5:
+        "GV BAJA SERVICES es una empresa que siempre ha dado un paso más por nuestros clientes. Siempre buscando la mejor manera, la mejor respuesta y solución para cualquier situación en la que se encuentren. GV Baja Services tiene una relación muy personal con cada cliente, te conviertes en un amigo. Nos esforzamos por mostrar a nuestros clientes, a través de la calidad de nuestro servicio, cuánto los valoramos, con la esperanza de que al final del proceso con nosotros, pasen de ser nuestros amigos a parte de nuestra familia. La calidez de este país te abraza a través de acciones de cuidado, y velamos por los mejores intereses de nuestros clientes, lo cual ha sido nuestra máxima prioridad durante más de 10 años. Por favor, tómate el tiempo para leer nuestras maravillosas reseñas y no dudes en contactarnos para obtener más información sobre cualquiera de nuestros servicios.",
+      muchas_gracias: "Muchas Gracias,",
+      sign: "Gabriela Victorica Hurtado: CEO GV Baja Services",
+      lets_talk: "HABLEMOS",
 
       //- No need for Section 2
 
