@@ -12,7 +12,7 @@ import footerImg from "../../assets/homepage/footer-asset-1.png";
 
 //Imports
 import { useEffect } from "react";
-import Section4 from "../homepage/Section4";
+// import Section4 from "../homepage/Section4";
 import Section5 from "../homepage/Section5";
 import Section6 from "../homepage/Section6";
 
