@@ -2,8 +2,8 @@
 
 //Assets
 import heroBg from "../../assets/for_sale/hero-asset-1.png";
-import commonHero from "../../assets/common_hero_asset_1.png";
-import footerBg from "../../assets/for_rent/footer-asset-1.png"
+import commonHero from "../../assets/common_hero_asset_1.jpg";
+import footerBg from "../../assets/for_rent/footer-asset-1.jpg"
 
 //Components
 import BasicHeroV2 from "../common/BasicHeroV2";

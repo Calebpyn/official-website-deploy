@@ -7,7 +7,7 @@ import PresentationCard from "../common/PresentationCard";
 import { CircularProgress } from "@mui/material";
 
 //Assets
-import pcImage from "../../assets/property_m/profile_img.jpg";
+import pcImage from "../../assets/common_profile_image.jpg";
 
 //Imports
 import { useEffect, useState } from "react";
@@ -133,6 +133,7 @@ const Section1: React.FC<propertyDsiplay> = ({ id }) => {
             </div>
 
             <div className="flex justify-center items-start px-10 bg-white rounded-lg p-5 shadow-lg mt-5 flex-col">
+              <span className="text-2xl font-black">{propertyInfo?.name}</span>
               <span className="font-semibold mb-1">{t("price")}</span>
               <span className="text-[#C9A117] text-3xl">
                 ${convertStringToFormattedFloat(propertyInfo?.price!)}{" "}

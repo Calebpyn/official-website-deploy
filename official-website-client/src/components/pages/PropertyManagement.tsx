@@ -12,7 +12,7 @@ import Footer from "../common/Footer";
 
 //Assets
 import heroBg from "../../assets/property_m/hero-asset-1.png";
-import footerBg from "../../assets/property_m/footer-asset-1.png";
+import footerBg from "../../assets/property_m/footer-asset-1.jpg";
 
 function PropertyManagement() {
   //Scroll to top

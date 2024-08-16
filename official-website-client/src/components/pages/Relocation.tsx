@@ -2,7 +2,7 @@
 
 //Assets
 import mainBg from "../../assets/relocation/hero-asset-1.png";
-import footerBg from "../../assets/relocation/footer-asset-1.png";
+import footerBg from "../../assets/relocation/footer-asset-1.jpg";
 
 
 //Components

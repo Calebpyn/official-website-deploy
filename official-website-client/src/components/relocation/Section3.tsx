@@ -1,7 +1,7 @@
 //Description: Relocation information section
 
 //Assets
-import bgMain from "../../assets/relocation/bg-asset-2.png";
+import bgMain from "../../assets/relocation/bg-asset-2.jpg";
 
 //Icons
 import { FaArrowAltCircleUp } from "react-icons/fa";

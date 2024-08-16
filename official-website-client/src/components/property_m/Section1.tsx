@@ -1,7 +1,7 @@
 //Description: Homeowners info
 
 //Assets
-import infoImg from "../../assets/property_m/bg-asset-1.png"
+import infoImg from "../../assets/property_m/bg-asset-1.jpg"
 
 //Translation
 import { useTranslation } from "react-i18next"

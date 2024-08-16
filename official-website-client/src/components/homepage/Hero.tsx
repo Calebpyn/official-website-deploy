@@ -4,7 +4,7 @@
 import { useTranslation } from "react-i18next";
 
 //Assets
-import mainBg from "../../assets/homepage/hero-asset-1.jpeg";
+import mainBg from "../../assets/homepage/hero-asset-1.jpg";
 
 function Hero() {
   //Translation

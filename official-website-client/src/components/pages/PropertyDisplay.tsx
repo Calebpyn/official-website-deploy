@@ -9,7 +9,7 @@ import Section1 from "../property_display/Section1";
 import Footer from "../common/Footer";
 
 //Assets
-import mainFooter from "../../assets/property_display/footer-asset-1.png";
+import mainFooter from "../../assets/property_display/footer-asset-1.jpg";
 
 //Hooks
 import { useEffect } from "react";

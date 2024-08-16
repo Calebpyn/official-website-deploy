@@ -2,13 +2,13 @@
 import Carousel from "../common/Carousel";
 
 //Assets
-import carousel_aaset1 from "../../assets/relocation/carousel/asset_carousel_1.png";
-import carousel_aaset2 from "../../assets/relocation/carousel/asset_carousel_2.png";
-import carousel_aaset3 from "../../assets/relocation/carousel/asset_carousel_3.png";
-import carousel_aaset4 from "../../assets/relocation/carousel/asset_carousel_4.png";
-import carousel_aaset5 from "../../assets/relocation/carousel/asset_carousel_5.png";
-import carousel_aaset6 from "../../assets/relocation/carousel/asset_carousel_6.png";
-import carousel_aaset7 from "../../assets/relocation/carousel/asset_carousel_7.png";
+import carousel_aaset1 from "../../assets/relocation/carousel/asset_carousel_1.jpg";
+import carousel_aaset2 from "../../assets/relocation/carousel/asset_carousel_2.jpg";
+import carousel_aaset3 from "../../assets/relocation/carousel/asset_carousel_3.jpg";
+import carousel_aaset4 from "../../assets/relocation/carousel/asset_carousel_4.jpg";
+import carousel_aaset5 from "../../assets/relocation/carousel/asset_carousel_5.jpg";
+import carousel_aaset6 from "../../assets/relocation/carousel/asset_carousel_6.jpg";
+import carousel_aaset7 from "../../assets/relocation/carousel/asset_carousel_7.jpg";
 
 //Imports
 import { useEffect, useState } from "react";

@@ -4,8 +4,8 @@
 import { useTranslation } from "react-i18next";
 
 //Assets
-import bgImage from "../../assets/homepage/section5-asset-1.png";
-import profileImage from "../../assets/homepage/temporal_profile.png";
+import bgImage from "../../assets/homepage/section5-asset-1.jpg";
+import profileImage from "../../assets/common_profile_image.jpg";
 
 function Section5() {
   //Translation
@@ -37,7 +37,7 @@ function Section5() {
         </div>
 
         <div className="md:w-[40%] px-10 mb-5 md:mb-0">
-          <img src={profileImage} />
+          <div style={{backgroundImage: `url(${profileImage})`}} className="h-[500px] w-[500px] rounded-full bg-center bg-cover"></div>
         </div>
       </div>
     </div>

@@ -9,9 +9,9 @@ import Section2 from "../for_sale/Section2";
 import Certified from "../common/Certified";
 
 //Assets
-import footerBg from "../../assets/for_sale/footer-asset-1.jpeg";
+import footerBg from "../../assets/for_sale/footer-asset-1.jpg";
 import heroBg from "../../assets/for_sale/hero-asset-1.png";
-import commonHero from "../../assets/common_hero_asset_1.png";
+import commonHero from "../../assets/common_hero_asset_1.jpg";
 
 //Hooks
 import { useEffect } from "react";

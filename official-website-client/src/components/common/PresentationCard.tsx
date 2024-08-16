@@ -33,7 +33,7 @@ const PresentationCard: React.FC<PresentationCardType> = ({
       <div className="w-full flex justify-center items-center">
         <span className="text-xl font-semibold">{t(`${title}`)}</span>
       </div>
-      <div className="h-[300px] overflow-clip rounded-md shadow-sm">
+      <div className="h-[350px] overflow-clip rounded-md shadow-sm">
         <img src={image} className="" />
       </div>
 

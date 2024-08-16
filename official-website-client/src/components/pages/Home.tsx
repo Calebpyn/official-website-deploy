@@ -8,7 +8,7 @@ import Section2 from "../homepage/Section2";
 import Section3 from "../homepage/Section3";
 
 //Assets
-import footerImg from "../../assets/homepage/footer-asset-1.png";
+import footerImg from "../../assets/homepage/footer-asset-1.jpg";
 
 //Imports
 import { useEffect } from "react";
