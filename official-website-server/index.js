@@ -24,9 +24,11 @@ app.use(morgan("combined"));
 app.use(express.json());
 app.use(routes);
 
+// Middleware to handle raw binary data
+app.use(express.raw({ type: "*/*", limit: "50mb" }));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 
 //Error Manager
 app.use((err, req, res, next) => {

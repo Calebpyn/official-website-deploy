@@ -11,6 +11,15 @@ const apiKey = process.env.SUPABASE_API_KEY;
 const project = process.env.SUPABASE_DB_URL;
 const supabase = createClient(project, apiKey);
 
+//Functions
+// Function to sanitize filenames
+const sanitizeFilename = (filename) => {
+  return filename
+    .replace(/ /g, '_') // Replace spaces with underscores
+    .replace(/[<>:"/\\|?*]/g, '') // Remove invalid characters
+    .replace(/·/g, '_'); // Replace special character '·' with '_'
+};
+
 //GET
 //  Get all properties
 const getAllProperties = async (req, res) => {
@@ -158,7 +167,7 @@ const getAllForRent = async (req, res) => {
     const { data: properties, error: propertiesError } = await supabase
       .from("property")
       .select("*")
-      .in("type", ["For Rent", "AirBnB"])
+      .in("type", ["For Rent", "AirBnB"]);
 
     if (propertiesError) throw propertiesError;
 
@@ -227,12 +236,41 @@ const getAllForAirBnb = async (req, res) => {
   }
 };
 
+//  Get all images from the bucket
+const getAllImages = async (req, res) => {
+  try {
+    const { data, error } = await supabase.storage
+      .from("property_images")
+      .list("public");
+    if (error) {
+      console.error("Error fetching images:", error);
+      res.status(500).json({ error: error.message });
+    }
+    // Generate public URLs for each image
+    const images = [];
+
+    for (let i = 0; i < data.length; i++) {
+      let temporalObj = {
+        isClicked: false,
+        url: supabase.storage
+          .from("property_images")
+          .getPublicUrl(`public/${data[i].name}`).data.publicUrl,
+      };
+      images.push(temporalObj);
+    }
+
+    res.json(images);
+  } catch (error) {
+    // Send error response
+    res.status(500).json({ error: error.message });
+  }
+};
+
 //POST
 //  Post a new property
 const newProperty = async (req, res) => {
   try {
-
-    console.log(req.body.images)
+    console.log(req.body.images);
     // Insert the new property and get its ID
     const { data: propertyData, error: propertyError } = await supabase
       .from("property")
@@ -245,7 +283,7 @@ const newProperty = async (req, res) => {
           price: req.body.price,
           type: req.body.type,
           currency: req.body.currency,
-          images: req.body.images
+          images: req.body.images,
         },
       ])
       .select("id");
@@ -293,6 +331,35 @@ const newAccess = async (req, res) => {
       .status(201)
       .json({ message: "Access created successfully", id: data[0].id });
   } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+//Save an image
+const uploadImage = async (req, res) => {
+  try {
+    const file = req.file; // Access the uploaded file
+
+    if (!file) {
+      return res.status(400).json({ error: "No file uploaded" });
+    }
+
+    const sanitizedFilename = sanitizeFilename(file.originalname); // Sanitize filename
+
+    const { data, error } = await supabase.storage
+      .from("property_images")
+      .upload(`public/${sanitizedFilename}`, file.buffer, {
+        contentType: file.mimetype,
+      });
+
+    if (error) {
+      console.error("Supabase upload error:", error.message);
+      return res.status(500).json({ error: error.message });
+    }
+
+    res.status(200).json({ message: "Image uploaded successfully." });
+  } catch (error) {
+    console.error("Error uploading image:", error);
     res.status(500).json({ error: error.message });
   }
 };
@@ -418,6 +485,27 @@ const deleteAccess = async (req, res) => {
   }
 };
 
+//Delete images
+const deleteImages = async (req, res) => {
+  const { filenames } = req.body;
+
+  try {
+    const { data, error } = await supabase.storage
+      .from("property_images")
+      .remove(filenames.map((name) => `public/${name}`));
+
+    if (error) {
+      console.error("Error deleting images:", error);
+      return res.status(500).json({ error: error.message });
+    }
+
+    res.status(200).json({ message: "Images deleted successfully." });
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: error.message });
+  }
+};
+
 module.exports = {
   getAllImagesById,
   newImage,
@@ -425,11 +513,14 @@ module.exports = {
   getAllProperties,
   updateProperty,
   deleteProperty,
+  deleteImages,
   getAllowedUsers,
   newAccess,
+  uploadImage,
   deleteAccess,
   getAllForSale,
   getAllForRent,
   getAllForAirBnb,
   getPropertyById,
+  getAllImages,
 };
