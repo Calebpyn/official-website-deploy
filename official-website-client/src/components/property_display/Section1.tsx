@@ -133,7 +133,9 @@ const Section1: React.FC<propertyDsiplay> = ({ id }) => {
             </div>
 
             <div className="flex justify-center items-start px-10 bg-white rounded-lg p-5 shadow-lg mt-5 flex-col">
-              <span className="text-2xl font-black">{propertyInfo?.name}</span>
+              <span className="text-2xl font-black">{i18n.language == "en"
+                    ? propertyInfo?.name
+                    : propertyInfo?.name_es}</span>
               <span className="font-semibold mb-1">{t("price")}</span>
               <span className="text-[#C9A117] text-3xl">
                 ${convertStringToFormattedFloat(propertyInfo?.price!)}{" "}
