@@ -37,7 +37,7 @@ function Section5() {
         </div>
 
         <div className="md:w-[40%] px-10 mb-5 md:mb-0">
-          <div style={{backgroundImage: `url(${profileImage})`}} className="h-[500px] w-[500px] rounded-full bg-center bg-cover"></div>
+          <div style={{backgroundImage: `url(${profileImage})`}} className="h-[250px] w-[250px] lg:h-[500px] lg:w-[500px] rounded-full bg-center bg-cover"></div>
         </div>
       </div>
     </div>

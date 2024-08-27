@@ -16,7 +16,7 @@ function Hero() {
       style={{ backgroundImage: `url(${mainBg})` }}
     >
       <div className="w-full h-full bg-gradient-to-r from-[#FDB42D] to-transparent flex justify-center md:justify-start items-center">
-        <span className="md:pl-16 text-white font-bold text-7xl tracking-wide leading-snug text-center md:text-left">
+        <span className="md:pl-16 text-white font-bold text-5xl md:text-7xl tracking-wide leading-snug text-center md:text-left">
           {t("thinking")}
           <br />
           {t("about_moving")}

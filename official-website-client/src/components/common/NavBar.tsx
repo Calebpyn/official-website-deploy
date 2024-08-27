@@ -181,7 +181,7 @@ function NavBar() {
             <FaPhone className="text-[#e6a146]" />
             {/* Phones will change later */}
             <span className="text-white font-light text-sm ml-1">
-              US (760) 315-576
+              US (760) 315-0576
             </span>
           </span>
 

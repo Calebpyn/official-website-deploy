@@ -2,9 +2,10 @@
 
 //Types
 import { videoType } from "../../types/homepage/Section1Types";
+import VimeoEmbed from "../common/VimeoEmbed";
 
 //Components
-import YouTubeEmbed from "../common/YoutubeEmbed";
+// import YouTubeEmbed from "../common/YoutubeEmbed";
 
 //Imports
 import { useEffect, useState } from "react";
@@ -18,9 +19,10 @@ function Section1() {
 
   //Video options
   const [videoOpts, setVideoOpts] = useState<videoType>({
-    videoId: "i8e6LjAnoRM",
-    width: "500",
-    height: "300",
+    videoId:
+      "https://player.vimeo.com/video/979467141?h=61b20c2e11&badge=0&autopause=0&player_id=0&app_id=58479",
+    width: "",
+    height: "",
   });
 
   //Inner width state
@@ -44,18 +46,26 @@ function Section1() {
   //Use Effect over the reactive state
   useEffect(() => {
     let responsiveWidth = (windowWidth / 2) * 0.7;
-    let responsiveHeight = responsiveWidth / 1.6;
-    setVideoOpts({
-      ...videoOpts,
-      width: responsiveWidth.toString(),
-      height: responsiveHeight.toString(),
-    });
+    let responsiveHeight = responsiveWidth / 1.8;
+    if (windowWidth < 550) {
+      setVideoOpts({
+        ...videoOpts,
+        width: "300",
+        height: "166",
+      });
+    } else {
+      setVideoOpts({
+        ...videoOpts,
+        width: responsiveWidth.toString(),
+        height: responsiveHeight.toString(),
+      });
+    }
   }, [windowWidth]);
 
   return (
     <div className="w-full py-5 md:min-h-[400px] bg-[#174067] flex flex-col md:flex-row md:text-left text-center md:gap-5 justify-between items-center">
       <div className="rounded-lg overflow-hidden md:pl-16">
-        <YouTubeEmbed
+        <VimeoEmbed
           videoId={videoOpts.videoId}
           width={videoOpts.width}
           height={videoOpts.height}
@@ -63,9 +73,9 @@ function Section1() {
       </div>
 
       <div className="md:w-[50%] w-[90%] mt-2 md:mt-0">
-        <div className="bg-[#FDB42D] p-5 md:rounded-r-none rounded-lg">
-          <span className="text-white font-bold text-2xl md:text-4xl leading-normal">
-            {t("section_text")}
+        <div className="bg-[#FDB42D] p-5 md:rounded-r-none rounded-lg border-4 border-black md:border-r-0 border-r-4">
+          <span className="text-white font-bold text-2xl md:text-4xl leading-normal italic">
+            "{t("section_text")}"
           </span>
         </div>
       </div>

@@ -24,7 +24,7 @@ function Section2() {
             <div className="w-[8px] h-[90px] bg-[#EC6E30] mr-5"></div>
             <div className="text-white font-bold text-3xl flex flex-col items-start">
               <span>{t("make_the_move")}</span>
-              <span>{t("to_baja")}</span>
+              <span>{t("to_baja_s2")}</span>
             </div>
           </div>
           <div className="text-white">

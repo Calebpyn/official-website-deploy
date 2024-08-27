@@ -34,18 +34,18 @@ function Section1() {
   const [carouselOpts, setCarouselOpts] = useState<carouselType>({
     imgArray: carouselImgs,
     width: "450",
-    height: "700"
-  })
+    height: "700",
+  });
 
   useEffect(() => {
-    if(window.innerWidth < 768){
+    if (window.innerWidth < 768) {
       setCarouselOpts({
         ...carouselOpts,
         width: "250",
-        height: "310"
-      })
+        height: "310",
+      });
     }
-  }, [])
+  }, []);
 
   return (
     <div className="py-10 w-full flex justify-center items-center bg-white md:flex-row flex-col">
@@ -64,6 +64,9 @@ function Section1() {
             {t("text_segment_1")}{" "}
             <b className="font-bold">{t("bold_text_1")}</b>
             {t("text_segment_2")}
+            <br />
+            <br />
+            <b className="font-bold">{t("the_relocation_tour")}</b>
             <br />
             <br />
             {t("text_segment_2_1")}
@@ -86,7 +89,11 @@ function Section1() {
           </p>
         </div>
       </div>
-      <Carousel imgArray={carouselOpts.imgArray} width={carouselOpts.width} height={carouselOpts.height} />
+      <Carousel
+        imgArray={carouselOpts.imgArray}
+        width={carouselOpts.width}
+        height={carouselOpts.height}
+      />
     </div>
   );
 }

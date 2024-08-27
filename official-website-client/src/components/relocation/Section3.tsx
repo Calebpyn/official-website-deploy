@@ -18,18 +18,18 @@ function Section3() {
       className="w-full h-auto bg-center bg-cover flex justify-center items-center"
       style={{ backgroundImage: `url('${bgMain}')` }}
     >
-      <div className="md:p-20 p-5 bg-white bg-opacity-60 flex flex-col gap-5">
+      <div className="md:p-20 p-5 bg-white bg-opacity-70 flex flex-col gap-5">
         <div>
           <span className="text-[#EC6E30] font-bold text-lg">
-            {t("coming_to_baja")}
+            {t("title_r_s3")}
           </span>
         </div>
         <div>
-          <span className="font-bold text-3xl">
+          <span className="font-bold text-3xl border-2 border-black px-2 rounded-full">
             {t("relocation_assistance")}
           </span>
         </div>
-        <div className="gap-7 flex flex-col">
+        <div className="gap-7 flex flex-col text-xl">
           <span>
             <p>
               {t("text_segment_s3_1")}
@@ -47,7 +47,7 @@ function Section3() {
               {t("text_segment_s3_5")}
               <b>{t("bold_text_s3_5")}</b>
               {t("text_segment_s3_6")}
-              <b>2007 </b>
+              {/* <b>2007 </b> */}
               {t("text_segment_s3_7")}
               <b>{t("bold_text_s3_7")}</b>
               {t("text_segment_s3_8")}
@@ -57,7 +57,7 @@ function Section3() {
           <span>{t("check_our_reviews")}</span>
         </div>
         <div className="flex justify-center items-center w-full">
-          <span className="md:w-[60%] w-[90%] text-center text-[#59853C] font-bold">
+          <span className="md:w-[60%] w-[90%] text-center text-black font-bold">
             {t("bottom_info")}
           </span>
         </div>
