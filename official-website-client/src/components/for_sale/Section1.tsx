@@ -46,6 +46,7 @@ function Section1() {
         <div className="w-full bg-white p-5 flex-wrap flex justify-around">
           {allProperties.map((item: propertyDisplayType) => (
             <PropertyCard
+              airbnb={item.type == "AirBnB"}
               id={item.id}
               key={item.id}
               atts={item.atts}
