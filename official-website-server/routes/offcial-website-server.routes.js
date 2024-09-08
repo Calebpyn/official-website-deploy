@@ -3,7 +3,7 @@
 //Imports
 const { Router } = require("express");
 const router = new Router();
-const upload = require('../middlewares/MulterSetUp'); 
+const upload = require("../middlewares/MulterSetUp");
 
 //Controllers
 const {
@@ -23,11 +23,15 @@ const {
   getAllImages,
   deleteImages,
   uploadImage,
+  getLastTenProperties,
+  getAllLocations,
 } = require("../controllers/offcial-website-server.controllers");
 
 //GET
 //  Get all properties
 router.get("/all_properties", getAllProperties);
+//  Get last ten properties
+router.get("/last_ten_properties", getLastTenProperties);
 //  Get property by id
 router.get("/property/:id", getPropertyById);
 //  Get images by id
@@ -42,6 +46,8 @@ router.get("/for_rent", getAllForRent);
 router.get("/for_airbnb", getAllForAirBnb);
 //  Get all images from bucket
 router.get("/all_bucket_images", getAllImages);
+//  Get all locations
+router.get("/all_locations", getAllLocations);
 
 //POST
 //  Create new property
@@ -53,7 +59,7 @@ router.post("/new_access", newAccess);
 //Delete images
 router.post("/delete_images", deleteImages);
 //New image
-router.post('/upload_image', upload.single('file'), uploadImage);
+router.post("/upload_image", upload.single("file"), uploadImage);
 
 //PUT
 // Update an existing property

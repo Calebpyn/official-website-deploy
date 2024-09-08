@@ -15,9 +15,9 @@ const supabase = createClient(project, apiKey);
 // Function to sanitize filenames
 const sanitizeFilename = (filename) => {
   return filename
-    .replace(/ /g, '_') // Replace spaces with underscores
-    .replace(/[<>:"/\\|?*]/g, '') // Remove invalid characters
-    .replace(/·/g, '_'); // Replace special character '·' with '_'
+    .replace(/ /g, "_") // Replace spaces with underscores
+    .replace(/[<>:"/\\|?*]/g, "") // Remove invalid characters
+    .replace(/·/g, "_"); // Replace special character '·' with '_'
 };
 
 //GET
@@ -28,6 +28,45 @@ const getAllProperties = async (req, res) => {
     const { data: properties, error: propertiesError } = await supabase
       .from("property")
       .select("*");
+
+    if (propertiesError) throw propertiesError;
+
+    // If there are no properties, return an empty array
+    if (properties.length === 0) {
+      return res.json([]);
+    }
+
+    // Fetch all related attributes for the properties
+    const propertyIds = properties.map((property) => property.id);
+    const { data: attributes, error: attributesError } = await supabase
+      .from("att")
+      .select("*")
+      .in("fk_property", propertyIds);
+
+    if (attributesError) throw attributesError;
+
+    // Combine properties with their related attributes
+    const propertiesWithAttributes = properties.map((property) => ({
+      ...property,
+      atts: attributes.filter((att) => att.fk_property === property.id),
+    }));
+
+    // Send the combined data
+    res.json(propertiesWithAttributes);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+//  Get all properties
+const getLastTenProperties = async (req, res) => {
+  try {
+    // Fetch all properties
+    const { data: properties, error: propertiesError } = await supabase
+      .from("property")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(10);
 
     if (propertiesError) throw propertiesError;
 
@@ -266,6 +305,34 @@ const getAllImages = async (req, res) => {
   }
 };
 
+//Get all properties locations
+const getAllLocations = async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from("property")
+      .select("id, name, lat, lng");
+
+    if (error) throw error;
+
+    if (!data || data.length === 0) {
+      return res.json([]);
+    }
+
+    const locations = data.map(({ id, name, lat, lng }) => ({
+      id,
+      name,
+      location: {
+        lat: parseFloat(lat),
+        lng: parseFloat(lng),
+      },
+    }));
+
+    res.json(locations);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
 //POST
 //  Post a new property
 const newProperty = async (req, res) => {
@@ -284,6 +351,8 @@ const newProperty = async (req, res) => {
           type: req.body.type,
           currency: req.body.currency,
           images: req.body.images,
+          lat: req.body.lat,
+          lng: req.body.lng,
         },
       ])
       .select("id");
@@ -404,6 +473,8 @@ const updateProperty = async (req, res) => {
         type: req.body.type,
         currency: req.body.currency,
         images: req.body.images,
+        lat: req.body.lat,
+        lng: req.body.lng,
       })
       .eq("id", req.params.id);
 
@@ -523,4 +594,6 @@ module.exports = {
   getAllForAirBnb,
   getPropertyById,
   getAllImages,
+  getLastTenProperties,
+  getAllLocations,
 };
