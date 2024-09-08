@@ -15,7 +15,6 @@ import { useState } from "react";
 import { cardOptions } from "../../types/homepage/Section2Types";
 
 function Section2() {
-
   //Card settings
   const [cardOptions] = useState<cardOptions>({
     width: "300",
@@ -27,7 +26,7 @@ function Section2() {
       <Card
         width={cardOptions.width}
         height={cardOptions.height}
-        redirect="for_sale"
+        redirect="real_estate"
         image={asset1}
         text="real_estate"
       />

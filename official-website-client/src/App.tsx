@@ -10,6 +10,8 @@ import PropertyManagement from "./components/pages/PropertyManagement";
 import PropertyDisplay from "./components/pages/PropertyDisplay";
 import ForSale from "./components/pages/ForSale";
 import ForRent from "./components/pages/ForRent";
+import AboutUs from "./components/pages/AboutUs";
+import RealEstate from "./components/pages/RealEstate";
 
 function App() {
   return (
@@ -26,8 +28,10 @@ function App() {
             <Route path="/real_estate/:id" element={<PropertyDisplay />} />
             <Route path="/for_sale" element={<ForSale />} />
             <Route path="/for_rent" element={<ForRent />} />
+            <Route path="/about_us" element={<AboutUs />} />
+            <Route path="/real_estate" element={<RealEstate />} />
           </Routes>
-          <ContactButton/>
+          <ContactButton />
         </div>
       </div>
     </HashRouter>

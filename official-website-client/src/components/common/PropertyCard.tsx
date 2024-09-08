@@ -7,6 +7,9 @@ import { propertyCardType } from "../../types/common/PropertyCard";
 //Translation
 import { useTranslation } from "react-i18next";
 
+//Icons
+import { FaAirbnb } from "react-icons/fa";
+
 const PropertyCard: React.FC<propertyCardType> = ({
   atts,
   id,
@@ -17,6 +20,7 @@ const PropertyCard: React.FC<propertyCardType> = ({
   title,
   width,
   for_sale,
+  airbnb,
 }) => {
   //Translation
   const { t, i18n } = useTranslation();
@@ -46,12 +50,17 @@ const PropertyCard: React.FC<propertyCardType> = ({
       style={{ width: `${width}px` }}
       onClick={() => navigate(`/real_estate/${id}`)}
     >
-      <span className="w-full flex justify-start items-center text-2xl">
+      <span className="w-full flex justify-between items-center text-2xl">
         {i18n.language == "es"
           ? title.es
           : i18n.language == "en"
           ? title.en
           : null}
+        {airbnb ? (
+          <span className="flex items-center gap-1 bg-[#FF5A5F] rounded-full text-white px-3">
+            AirBnB <FaAirbnb />
+          </span>
+        ) : null}
       </span>
 
       <div className="h-[300px] overflow-hidden flex justify-center items-center">

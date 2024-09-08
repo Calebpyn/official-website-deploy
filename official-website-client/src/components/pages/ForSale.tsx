@@ -6,7 +6,7 @@ import BasicHeroV2 from "../common/BasicHeroV2";
 import RedirectionSection from "../common/RedirectionSection";
 import Section1 from "../for_sale/Section1";
 import Section2 from "../for_sale/Section2";
-import Certified from "../common/Certified";
+import ComplexMarkerMap from "../common/ComplexMarkerMap";
 
 //Assets
 import footerBg from "../../assets/for_sale/footer-asset-1.jpg";
@@ -32,7 +32,7 @@ function ForSale() {
         title="title_fr"
       />
       <Section2 />
-      <Certified />
+      <ComplexMarkerMap />
       <Footer img={footerBg} />
     </div>
   );

@@ -92,7 +92,7 @@ const Section1: React.FC<propertyDsiplay> = ({ id }) => {
     }
     return "?";
   }
-  
+
   return (
     <div className="w-full flex justify-center items-center p-10 bg-[#F4F2E2]">
       {isLoading ? (
@@ -113,7 +113,7 @@ const Section1: React.FC<propertyDsiplay> = ({ id }) => {
             <div className="flex justify-center items-center bg-white rounded-lg p-5 shadow-lg">
               <div className="w-full flex flex-col justify-start items-start gap-5">
                 <div className="w-full flex justify-between">
-                  <span className="bg-[#F7657D] px-5 py-3 text-white font-semibold">
+                  <span className="bg-[#F7657D] px-5 py-3 text-white font-semibold select-none">
                     {t("home_details")}
                   </span>
 
@@ -124,7 +124,7 @@ const Section1: React.FC<propertyDsiplay> = ({ id }) => {
                   ) : null}
                 </div>
 
-                <p className="leading-7 text-zinc-600 font-light">
+                <p className="leading-7 text-zinc-600 font-light select-none">
                   {i18n.language == "en"
                     ? propertyInfo?.desc
                     : propertyInfo?.desc_es}
@@ -132,10 +132,12 @@ const Section1: React.FC<propertyDsiplay> = ({ id }) => {
               </div>
             </div>
 
-            <div className="flex justify-center items-start px-10 bg-white rounded-lg p-5 shadow-lg mt-5 flex-col">
-              <span className="text-2xl font-black">{i18n.language == "en"
-                    ? propertyInfo?.name
-                    : propertyInfo?.name_es}</span>
+            <div className="flex justify-center items-start px-10 bg-white rounded-lg p-5 shadow-lg mt-5 flex-col select-none">
+              <span className="text-2xl font-black">
+                {i18n.language == "en"
+                  ? propertyInfo?.name
+                  : propertyInfo?.name_es}
+              </span>
               <span className="font-semibold mb-1">{t("price")}</span>
               <span className="text-[#C9A117] text-3xl">
                 ${convertStringToFormattedFloat(propertyInfo?.price!)}{" "}

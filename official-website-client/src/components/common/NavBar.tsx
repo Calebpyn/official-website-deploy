@@ -204,14 +204,73 @@ function NavBar() {
               className="font-black text-3xl text-white cursor-pointer"
               onClick={() => navigate("/")}
             >
-              <img src={mainLogo} className="rounded-full h-[80px]" />
+              <img
+                src={mainLogo}
+                className="rounded-full min-w-[80px] h-[80px]"
+              />
             </span>
           </span>
 
           <div className="bg-white h-[60px] w-[2px] mx-3"></div>
 
+          <span className="navbar-bp:gap-5 gap-3 text-white text-nowrap md:flex hidden select-none">
+            <span
+              className="hover:scale-105 tr cursor-pointer"
+              onClick={() => navigate("/")}
+            >
+              {t("home")}
+            </span>
+            <span
+              className="hover:scale-105 tr cursor-pointer"
+              onClick={() => navigate("about_us")}
+            >
+              {t("about_us")}
+            </span>
+            <span className="relative group hover:scale-105 tr cursor-pointer">
+              <span onClick={() => navigate("real_estate")}>
+                {t("real_estate")}
+              </span>
+              <span className="hidden group-hover:flex pt-2 absolute">
+                <span className="bg-white left-0 top-[100%] rounded-md">
+                  <ul className="text-black">
+                    <li
+                      className=" hover:bg-black hover:bg-opacity-25 rounded-md p-1 pr-3 tr flex items-center"
+                      onClick={() => {
+                        navigate("for_sale");
+                      }}
+                    >
+                      <GoDotFill className="text-xs mr-1" />
+                      {t("for_sale")}
+                    </li>
+                    <li
+                      className=" hover:bg-black hover:bg-opacity-25 rounded-md p-1 pr-3 tr flex items-center"
+                      onClick={() => {
+                        navigate("for_rent");
+                      }}
+                    >
+                      <GoDotFill className="text-xs mr-1" />
+                      {t("for_rent")}
+                    </li>
+                  </ul>
+                </span>
+              </span>
+            </span>
+            <span
+              className="hover:scale-105 tr cursor-pointer"
+              onClick={() => navigate("property_m")}
+            >
+              {t("property_management")}
+            </span>
+            <span
+              className="hover:scale-105 tr cursor-pointer"
+              onClick={() => navigate("relocation")}
+            >
+              {t("relocation")}
+            </span>
+          </span>
+
           <span
-            className="text-white flex items-center hover:bg-[#072C4F] py-1 px-2 rounded-md tr cursor-pointer relative"
+            className="text-white flex items-center hover:bg-[#072C4F] py-1 px-2 rounded-md tr cursor-pointer relative md:hidden"
             onClick={() => setServicesOpen(!servicesOpen)}
           >
             <span className="mr-2 text-lg select-none">{t("services")}</span>
@@ -223,21 +282,48 @@ function NavBar() {
                 className="absolute top-0 mt-[38px] w-auto p-1 gap-2 bg-white shadow-md rounded-sm"
               >
                 <ul className="text-black">
-                  <li className=" hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr" onClick={() => navigate('for_sale')}>
+                  <li
+                    className=" hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr"
+                    onClick={() => navigate("/")}
+                  >
+                    {t("home")}
+                  </li>
+                  <li
+                    className=" hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr"
+                    onClick={() => navigate("about_us")}
+                  >
+                    {t("about_us")}
+                  </li>
+                  <li
+                    className=" hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr"
+                    onClick={() => navigate("real_estate")}
+                  >
                     {t("real_estate")}
                   </li>
-                  <li className=" hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr pl-5 flex items-center" onClick={() => navigate('for_sale')}>
-                    <GoDotFill className="text-xs mr-1"/>
-                    {t('for_sale')}
+                  <li
+                    className=" hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr pl-5 flex items-center"
+                    onClick={() => navigate("for_sale")}
+                  >
+                    <GoDotFill className="text-xs mr-1" />
+                    {t("for_sale")}
                   </li>
-                  <li className=" hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr pl-5 flex items-center" onClick={() => navigate('for_rent')}>
-                    <GoDotFill className="text-xs mr-1"/>
-                    {t('for_rent')}
+                  <li
+                    className=" hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr pl-5 flex items-center"
+                    onClick={() => navigate("for_rent")}
+                  >
+                    <GoDotFill className="text-xs mr-1" />
+                    {t("for_rent")}
                   </li>
-                  <li className="text-nowrap hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr" onClick={() => navigate('property_m')}>
+                  <li
+                    className="text-nowrap hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr"
+                    onClick={() => navigate("property_m")}
+                  >
                     {t("property_management")}
                   </li>
-                  <li className="text-nowrap hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr" onClick={() => navigate('relocation')}>
+                  <li
+                    className="text-nowrap hover:bg-black hover:bg-opacity-25 p-1 rounded-sm tr"
+                    onClick={() => navigate("relocation")}
+                  >
                     {t("relocation")}
                   </li>
                 </ul>
@@ -246,7 +332,7 @@ function NavBar() {
           </span>
         </div>
 
-        <div className="md:flex items-center justify-between hidden">
+        <div className="md:flex justify-between hidden flex-wrap-reverse gap-5 items-center navbar-bp:flex-row flex-col-reverse">
           <div className="flex mr-8 text-white text-lg gap-5">
             <FaFacebookF
               className="cursor-pointer tr hover:scale-105"
@@ -271,14 +357,10 @@ function NavBar() {
           </div>
 
           <div
-            className="bg-[#FDB42D] text-sm text-white flex text-center px-8 py-1 rounded-full shadow-lg hover:scale-105 tr cursor-pointer"
+            className="bg-[#FDB42D] text-sm text-white flex text-center px-8 py-3 rounded-full shadow-lg hover:scale-105 tr cursor-pointer"
             onClick={() => window.open(contactUrl, "_blank")}
           >
-            <span>
-              {t("book")}
-              <br />
-              {t("consultation")}
-            </span>
+            <span>{t("contact")}</span>
           </div>
         </div>
 

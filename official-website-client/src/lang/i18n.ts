@@ -10,6 +10,7 @@ const resources = {
       go: "Go",
 
       //Navbar
+      home: "Home",
       language: "Language",
       spanish: "Spanish",
       english: "English",
@@ -21,6 +22,7 @@ const resources = {
       relocation: "Relocation",
       for_rent: "For Rent",
       for_sale: "For Sale",
+      about_us: "About Us",
 
       //Homepage
       //- Hero
@@ -164,6 +166,83 @@ const resources = {
         "First and foremost, honesty and integrity. Gabriela is the embodiment of both to deal with your real estate transactions. Afterwards, she is very knowledgeable with the housing market and possesses an engaging personality to deal with any issues along the way. Best person to support the sale of my house. Definitely, a jewel.",
       review_fs_s2_2:
         "You can rest assured that Gabby can take care of all of your Baja real estate needs. She is a hustler, intuitive and detail oriented, creating an effortless experience for her clients.She makes a habit of going above and beyond at every turn. Thank you Gabby for your professionalism and taking such excellent care of us!",
+
+      //About us
+      //  Secrtion 1
+      content_p_1:
+        "Buenos Dias, Buenas Tardes, Buenas Noches wherever you are in the world. We are Justin and Gabriela McEntee. We run and own GV Baja Realty, we want to welcome you to our page. We have created material that we hope can assist you with Real Estate, Relocation, Property Management and Airbnb services. Our business has been running since 2007 and we don’t plan to stop anytime soon. Our business is located in Ensenada and we are your typical family, it’s us, our kids, our friends and our pets. One thing about us, we are very pet friendly because we too are pet lovers. We enjoy being active, exercising, going to events, traveling, laughing, and experiencing life which we are blessed to have.",
+      content_p_2:
+        "Our main objective is to answer your questions, assist you to find the answers that you are looking for, and make the process of moving to Baja or visiting Baja, a memorable and exciting adventure. People move here for different reasons, it’s not for everyone but for many, they are now calling Baja their home. If you do choose to move here or stay for an extended period of time, then we specialize in making your transition as smooth as possible.",
+      content_p_3:
+        "We are online creators therefore we can also be contacted through Facebook, Instagram, Tik-Tok, Google, Youtube, look for our name GV Baja Realty",
+
+      //Property Management
+      //  Section 4
+      title_pm_s4_1:
+        "Who are we and why should you choose GVBajaRealty for your Property Management needs?",
+      content_pm_s4_1:
+        "The owners of GVBajaRealty are Gabriela McEntee Victorica, and Justin McEntee. Both of our backgrounds are in sales, marketing, communication, and Real Estate. Gabriela is bi-lingual and has sold many homes, rented homes, and hosted homes in different neighborhoods and Campos in Ensenada. Justin is a licensed realtor from the states and has sold many homes in the U.S.",
+      content_pm_s4_1_2:
+        "We have been in this business for over a decade and continuously work hard everyday to improve ourselves, our client lives and the community that we live in. We are honest, reliable, available, and ready to serve you. ",
+      title_pm_s4_2:
+        "Why do we engage in helping Landlords and Tenants with their Property Management?",
+      content_pm_s4_2:
+        "We at GVBajaRealty love to see homeowners be able to provide housing to renters and to generate income in Baja.  We care about you, your property, and your tenant. And we do it all, so you can focus on the most important things in life.",
+      title_pm_s4_3: "Who are Property Management Professionals?",
+      content_pm_s4_3:
+        "Property management companies are professionals who have the experience to help you get the most out of your real estate investment and to make the process as simple as possible",
+      title_pm_s4_4:
+        "Our Services included with finding a tenant and the contract enforcement",
+      content_pm_s4_4:
+        "Lease Preparation, Negotiation, Signing and Lease Enforcement, Reference Check, Background Check (in some cases) Maintenance, Translation of the contract, Move-In & Move-Out.",
+      title_pm_s4_5: "How we Market your property to find a potential renter",
+      content_pm_s4_5:
+        "We aggressively market your property through multiple channels and manage all tenant showings, ensuring maximum visibility and interest from potential tenants.",
+
+      //Real estate info page
+      //  Hero
+      hero_title: "REAL ESTATE IN BAJA",
+
+      //  Section 1
+      content_re_s1:
+        "Real Estate is a very particular process in searching for the right home, going through the process to close on the home, and then finally purchasing and owning the home. We know that this purchase can bring more enjoyment, extra income, a second property and definitely more awesome experiences. These are just some of the reasons and there are plenty more which we can discuss. If you have been thinking of selling your home or finding a home, then we can help you. We are excited to share our experience with you, go search for properties and make the necessary connections with the owner, builders, and other agents to find a qualified buyer.",
+
+      title_re_s1: "There are two types of purchases in Baja:",
+
+      content_re_s1_2:
+        "Land Lease: you as the buyer are purchasing a home which sits on a land lease which is owned by the landowner. This option provides the opportunity to own a beautiful home for less. The land lease has a monthly or annual fee which is paid to the land owner. To purchase a home on a land lease, this agreement is between the seller and buyer, seller and land owner, and buyer and land owner. This type of transaction is different for those coming from the states, however here in Baja this is a very traditional type of transaction and purchase. A land lease can be notarized but this is not necessary.",
+
+      content_re_s1_3:
+        "Bank Trust: If a home is in Baja and within 100km of the boundaries of Mexico or inside 50km of the coast of Mexico you will need a Bank Trust to purchase a home. As a foreigner, you can only purchase land or a home on land which is held by a Mexican Bank in a Bank Trust if within the 50km and 100km boundaries.. This type of transaction is similar to the states, except a Notary is involved. You can hire our lawyer, and do we recommend him because he is experienced in Real Estate transactions, is a trusted member of the community and has been serving residents here and foreign clients for decades. If you request our lawyer, he will make sure that the necessary documents are created, signed, and approved and that the property does not have any liens. The timeframe for closing a transaction varies but a good rule of thumb is 3 months.",
+
+      //  Section 2
+      content_re_s2_1:
+        "We believe in transparency, open communication, finding solutions, and being professionals. Our network includes a Real Estate and Immigration Attorney, Notary, Translators, and any other professional that is needed to find or sell your home.",
+
+      content_re_s2_2:
+        "Our marketing is fairly typical with an exception; the exception for us, is our network which Continues to grow. Our relationships span from the U.S all the way to Mexicali, we have worked hard to curate and manage the network that we have. We will create drone videos, edit the video and then post it to the appropriate social platform to make your home stand out and to show the environment to prospective buyers. We create Reels, Stories, Posts and use Easy Broker, Google. Your home will be placed on multiple different social platforms and we will diligently work to get your home sold, for the highest price, best closing terms, and to a serious and willing buyer.",
+
+      content_re_s2_3: "Contact us for more info and we can discuss further",
+
+      //Property Management
+      //  Section 5
+      title_pm_s5_1: "The top responsibilities of a Property Manager:",
+      subtitle_pm_s5_1: "Finding and screening tenants",
+      subtitle_pm_s5_2: "Handling leases",
+      subtitle_pm_s5_3: "Managing complaints and emergencies",
+      subtitle_pm_s5_4: "Dealing with move-outs",
+
+      //  Section 6
+      title_pm_s6_1: "Option for our Services:",
+      content_pm_s6_1:
+        "We can oversee a property that is already being rented. In this situation we will be in communication with the tenant and landlord, when repairs are necessary, we will get them fixed and provide documentation for the repairs.",
+      content_pm_s6_2:
+        "In the situation where the landlord is overseeing their own property, has a renter/renter, and is coordinating the repairs, then we can offer our bill pay service, we will collect the bills and make sure that they are paid on time",
+      title_pm_s6_2: "Pricing Structure:",
+      content_pm_s6_3:
+        "GVBajaRealty offers different pricing structures for each individual homeowner. It depends on how many units will be rented, what services are required by the landlord/homeowner and the duration of the lease. Please send us a message and then we can discuss further.",
+      content_pm_s6_4:
+        "Price, terms, offerings, availability subject to change. All information deemed reliable, tenant to verify all.",
     },
   },
   es: {
@@ -172,6 +251,7 @@ const resources = {
       contact: "Contáctanos",
       go: "Ir",
       //Navbar
+      home: "Inicio",
       language: "Idioma",
       spanish: "Español",
       english: "Inglés",
@@ -183,6 +263,7 @@ const resources = {
       relocation: "Reubicación",
       for_rent: "En Renta",
       for_sale: "En Venta",
+      about_us: "Sobre Nosotros",
 
       //Homepage
       //- Hero
@@ -327,6 +408,88 @@ const resources = {
         "Antes que nada, honestidad e integridad. Gabriela es la personificación de ambas cualidades para manejar sus transacciones inmobiliarias. Además, tiene un gran conocimiento del mercado de viviendas y posee una personalidad encantadora para resolver cualquier problema que surja en el camino. La mejor persona para apoyar la venta de mi casa. Definitivamente, una joya.",
       review_fs_s2_2:
         "Puede estar seguro de que Gabby puede encargarse de todas sus necesidades inmobiliarias en Baja. Es una persona trabajadora, intuitiva y orientada a los detalles, creando una experiencia sin esfuerzo para sus clientes. Hace un hábito de ir más allá en cada oportunidad. ¡Gracias, Gabby, por tu profesionalismo y por cuidarnos tan bien!",
+
+      //About us
+      //  Section 1
+      content_p_1:
+        "Buenos Días, Buenas Tardes, Buenas Noches, donde sea que estés en el mundo. Somos Justin y Gabriela McEntee. Administramos y somos propietarios de GV Baja Realty, y queremos darte la bienvenida a nuestra página. Hemos creado material que esperamos pueda ayudarte con Bienes Raíces, Reubicación, Administración de Propiedades y servicios de Airbnb. Nuestro negocio ha estado funcionando desde 2007 y no planeamos detenernos pronto. Nuestro negocio está ubicado en Ensenada y somos una familia típica, somos nosotros, nuestros hijos, nuestros amigos y nuestras mascotas. Algo sobre nosotros es que somos muy amigables con las mascotas porque también somos amantes de los animales. Nos gusta mantenernos activos, hacer ejercicio, ir a eventos, viajar, reír y disfrutar de la vida, algo con lo que estamos bendecidos.",
+      content_p_2:
+        "Nuestro principal objetivo es responder tus preguntas, ayudarte a encontrar las respuestas que estás buscando, y hacer que el proceso de mudarse a Baja o visitar Baja sea una aventura memorable y emocionante. La gente se muda aquí por diferentes razones, no es para todos, pero para muchos, ahora llaman a Baja su hogar. Si decides mudarte aquí o quedarte por un período prolongado, nos especializamos en hacer tu transición lo más fluida posible.",
+      content_p_3:
+        "Somos creadores de contenido en línea, por lo tanto, también puedes contactarnos a través de Facebook, Instagram, Tik-Tok, Google, Youtube, busca nuestro nombre GV Baja Realty.",
+
+      //Property management
+      //  Section 4
+      title_pm_s4_1:
+        "¿Quiénes somos y por qué deberías elegir GVBajaRealty para tus necesidades de Administración de Propiedades?",
+      content_pm_s4_1:
+        "Los propietarios de GVBajaRealty son Gabriela McEntee Victorica y Justin McEntee. Ambos tienen experiencia en ventas, marketing, comunicación y bienes raíces. Gabriela es bilingüe y ha vendido, alquilado y gestionado propiedades en diversos vecindarios y Campos en Ensenada. Justin es un corredor de bienes raíces con licencia en Estados Unidos y ha vendido numerosas propiedades en dicho país.",
+      content_pm_s4_1_2:
+        "Llevamos más de una década en este negocio y trabajamos arduamente todos los días para mejorar nosotros mismos, la vida de nuestros clientes y la comunidad en la que vivimos. Somos honestos, confiables, disponibles y listos para servirte.",
+      title_pm_s4_2:
+        "¿Por qué nos dedicamos a ayudar a propietarios e inquilinos con la administración de propiedades?",
+      content_pm_s4_2:
+        "En GVBajaRealty nos encanta ver cómo los propietarios pueden ofrecer viviendas a los inquilinos y generar ingresos en Baja. Nos preocupamos por ti, tu propiedad y tu inquilino. Hacemos todo para que puedas enfocarte en las cosas más importantes de la vida.",
+      title_pm_s4_3:
+        "¿Quiénes son los Profesionales en Administración de Propiedades?",
+      content_pm_s4_3:
+        "Las empresas de administración de propiedades son profesionales con la experiencia necesaria para ayudarte a sacar el máximo provecho de tu inversión inmobiliaria y hacer el proceso lo más simple posible.",
+      title_pm_s4_4:
+        "Nuestros servicios incluyen la búsqueda de un inquilino y el cumplimiento del contrato",
+      content_pm_s4_4:
+        "Preparación del contrato, negociación, firma y cumplimiento del contrato, verificación de referencias, verificación de antecedentes (en algunos casos), mantenimiento, traducción del contrato, entrada y salida de inquilinos.",
+      title_pm_s4_5:
+        "Cómo promocionamos tu propiedad para encontrar un inquilino potencial",
+      content_pm_s4_5:
+        "Promocionamos agresivamente tu propiedad a través de múltiples canales y gestionamos todas las visitas de los inquilinos, asegurando la máxima visibilidad e interés de posibles inquilinos.",
+
+      //Real estate info page
+      //  Hero
+      hero_title: "BIENES RAÍCES EN BAJA",
+
+      //  Section 1
+      content_re_s1:
+        "El proceso de bienes raíces es muy particular, desde la búsqueda del hogar ideal, pasando por el proceso de cierre, hasta finalmente la compra y posesión de la propiedad. Sabemos que esta adquisición puede traer más satisfacción, ingresos extra, una segunda propiedad, y definitivamente experiencias increíbles. Estas son solo algunas de las razones, y hay muchas más que podemos discutir. Si has estado pensando en vender tu casa o encontrar un nuevo hogar, estamos aquí para ayudarte. Estamos emocionados de compartir nuestra experiencia contigo, buscar propiedades y hacer las conexiones necesarias con propietarios, constructores y otros agentes para encontrar al comprador adecuado.",
+
+      title_re_s1: "Existen dos tipos de compras en Baja:",
+
+      content_re_s1_2:
+        "Arrendamiento de Terreno: como comprador, estás adquiriendo una casa que se encuentra en un terreno arrendado, cuyo propietario es el dueño del terreno. Esta opción ofrece la oportunidad de poseer una hermosa casa por menos. El arrendamiento de terreno tiene un costo mensual o anual que se paga al dueño del terreno. Para comprar una casa en un terreno arrendado, este acuerdo es entre el vendedor y el comprador, el vendedor y el propietario del terreno, y el comprador y el propietario del terreno. Este tipo de transacción es diferente para quienes vienen de los Estados Unidos; sin embargo, aquí en Baja es un tipo de transacción y compra muy tradicional. Un arrendamiento de terreno puede ser notariado, pero no es necesario.",
+
+      content_re_s1_3:
+        "Fideicomiso Bancario: si una casa está en Baja y dentro de los 100 km de las fronteras de México o dentro de los 50 km de la costa de México, necesitarás un Fideicomiso Bancario para comprarla. Como extranjero, solo puedes comprar terrenos o casas en terrenos que están bajo un Fideicomiso Bancario en un banco mexicano si se encuentran dentro de los límites de 50 km y 100 km. Este tipo de transacción es similar a las de Estados Unidos, con la excepción de que se involucra a un notario. Puedes contratar a nuestro abogado, y te lo recomendamos porque tiene experiencia en transacciones de bienes raíces, es un miembro confiable de la comunidad y ha servido a residentes locales y clientes extranjeros durante décadas. Si solicitas a nuestro abogado, él se asegurará de que los documentos necesarios se creen, firmen y aprueben, y de que la propiedad no tenga gravámenes. El tiempo estimado para cerrar una transacción varía, pero una buena regla general es que puede tomar alrededor de 3 meses.",
+
+      //  Section 2
+
+      content_re_s2_1:
+        "Creemos en la transparencia, la comunicación abierta, encontrar soluciones y ser profesionales. Nuestra red incluye un Abogado de Bienes Raíces e Inmigración, Notario, Traductores, y cualquier otro profesional que se necesite para encontrar o vender tu casa.",
+
+      content_re_s2_2:
+        "Nuestro marketing es bastante típico con una excepción; la excepción para nosotros es nuestra red, que sigue creciendo. Nuestras relaciones se extienden desde los EE.UU. hasta Mexicali, y hemos trabajado arduamente para curar y gestionar la red que tenemos. Creamos videos con drones, editamos los videos y los publicamos en la plataforma social adecuada para hacer que tu propiedad se destaque y mostrar el entorno a posibles compradores. Creamos Reels, Stories, Posts y utilizamos Easy Broker, Google. Tu casa se colocará en varias plataformas sociales diferentes y trabajaremos diligentemente para vender tu casa, al precio más alto, con los mejores términos de cierre y a un comprador serio y dispuesto.",
+
+      content_re_s2_3:
+        "Contáctanos para más información y podremos discutir más detalles.",
+
+      //Property Management
+      //  Section 5
+      title_pm_s5_1:
+        "Las principales responsabilidades de un Administrador de Propiedades:",
+      subtitle_pm_s5_1: "Encontrar y seleccionar inquilinos",
+      subtitle_pm_s5_2: "Manejo de contratos de arrendamiento",
+      subtitle_pm_s5_3: "Gestionar quejas y emergencias",
+      subtitle_pm_s5_4: "Atender desalojos",
+
+      //  Section 6
+      title_pm_s6_1: "Opción para nuestros Servicios:",
+      content_pm_s6_1:
+        "Podemos supervisar una propiedad que ya está siendo rentada. En esta situación, estaremos en comunicación con el inquilino y el propietario. Cuando se necesiten reparaciones, las gestionaremos y proporcionaremos la documentación correspondiente.",
+      content_pm_s6_2:
+        "En el caso donde el propietario supervise su propia propiedad, tenga un inquilino y esté coordinando las reparaciones, podemos ofrecer nuestro servicio de pago de facturas. Recogeremos las facturas y nos aseguraremos de que se paguen a tiempo.",
+      title_pm_s6_2: "Estructura de Precios:",
+      content_pm_s6_3:
+        "GVBajaRealty ofrece diferentes estructuras de precios para cada propietario. Depende de cuántas unidades se rentarán, qué servicios requiere el propietario y la duración del contrato de arrendamiento. Envíanos un mensaje y podremos discutir más detalles.",
+      content_pm_s6_4:
+        "Precios, términos, ofertas y disponibilidad están sujetos a cambios. Toda la información se considera confiable, el inquilino debe verificar todo.",
     },
   },
 };

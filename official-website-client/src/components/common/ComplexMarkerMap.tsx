@@ -1,4 +1,9 @@
-import { Fragment, useState } from "react";
+//Map marker component
+
+//Hooks
+import { useEffect, useState } from "react";
+
+//Google maps api
 import {
   GoogleMap,
   InfoWindowF,
@@ -6,75 +11,88 @@ import {
   useLoadScript,
 } from "@react-google-maps/api";
 
+//Axios
+import axios from "axios";
 
-const markers = [
-  {
-    id: 1,
-    name: "Qobustan",
-    position: { lat: 40.0709493, lng: 49.3694411 },
-  },
-  {
-    id: 2,
-    name: "Sumqayit",
-    position: { lat: 40.5788843, lng: 49.5485073 },
-  },
-  {
-    id: 3,
-    name: "Baku",
-    position: { lat: 40.3947365, lng: 49.6898045 },
-  }
-];
+//Types
+import { allLocationsType } from "../../types/common/ComplexMarkerMapTypes";
+import { useNavigate } from "react-router-dom";
+
+//Initial location
+const center: any = {
+  lat: 31.857777777778,
+  lng: -116.60583333333,
+};
 
 function ComplexMarkerMap() {
+  //Load map
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCp_3QviOG9MCa27P3kVKY4Y1w9-cjWw1U",
+    googleMapsApiKey: import.meta.env.VITE_REACT_APP_GOOGLE_MAPS_API_KEY,
   });
 
-  const [activeMarker, setActiveMarker] = useState(null);
+  //Navigate
+  const navigate = useNavigate();
 
-  const handleActiveMarker = (marker:any) => {
+  //Active marker for displaying name and link state
+  const [activeMarker, setActiveMarker] = useState<number | null>(null);
+
+  //Set current selection
+  const handleActiveMarker = (marker: number) => {
     if (marker === activeMarker) {
       return;
     }
     setActiveMarker(marker);
   };
 
+  //All locations state
+  const [allLocations, setAllLocations] = useState<allLocationsType[]>([]);
+
+  const handleAllLocations = async () => {
+    const response = await axios
+      .get(`${import.meta.env.VITE_REACT_APP_API_URL}/all_locations`)
+      .catch((err) => {
+        console.log(err, "axios error");
+        alert("Something went wrong...");
+      });
+    setAllLocations(response!.data);
+  };
+
+  //Mount
+  useEffect(() => {
+    handleAllLocations();
+  }, []);
+
+  if (!isLoaded) return <div>Sorry something went wrong...</div>;
   return (
-    <Fragment>
-      <div className="container">
-        <h1 className="text-center">Vite + React | Google Map Markers</h1>
-        <div style={{ height: "90vh", width: "100%" }}>
-          {isLoaded ? (
-            <GoogleMap
-              center={{ lat: 40.3947365, lng: 49.6898045 }}
-              zoom={10}
-              onClick={() => setActiveMarker(null)}
-              mapContainerStyle={{ width: "100%", height: "90vh" }}
-            >
-              {markers.map(({ id, name, position }) => (
-                <MarkerF
-                  key={id}
-                  position={position}
-                  onClick={() => handleActiveMarker(id)}
-                  // icon={{
-                  //   url:"https://t4.ftcdn.net/jpg/02/85/33/21/360_F_285332150_qyJdRevcRDaqVluZrUp8ee4H2KezU9CA.jpg",
-                  //   scaledSize: { width: 50, height: 50 }
-                  // }}
+    <GoogleMap
+      center={center}
+      zoom={10}
+      // onClick={() => setActiveMarker(null)}
+      mapContainerStyle={{ width: "100%", height: "500px" }}
+    >
+      {allLocations.map(({ id, name, location }) => (
+        <MarkerF
+          key={id}
+          position={location}
+          onClick={() => handleActiveMarker(id)}
+        >
+          {activeMarker === id ? (
+            <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
+              <div className="w-[100px] flex justify-center items-center">
+                <span
+                  className="hover:scale-110 tr cursor-pointer"
+                  onClick={() => {
+                    navigate(`/real_estate/${id}`);
+                  }}
                 >
-                  {activeMarker === id ? (
-                    <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
-                      <div>
-                        <p>{name}</p>
-                      </div>
-                    </InfoWindowF>
-                  ) : null}
-                </MarkerF>
-              ))}
-            </GoogleMap>
+                  {name}
+                </span>
+              </div>
+            </InfoWindowF>
           ) : null}
-        </div>
-      </div>
-    </Fragment>
+        </MarkerF>
+      ))}
+    </GoogleMap>
   );
 }
 
