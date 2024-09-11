@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 
 //Translation
 import { useTranslation } from "react-i18next";
+import YouTubeEmbed from "../common/YoutubeEmbed";
 
 function Section1() {
   //Translation
@@ -19,8 +20,7 @@ function Section1() {
 
   //Video options
   const [videoOpts, setVideoOpts] = useState<videoType>({
-    videoId:
-      "https://player.vimeo.com/video/979467141?h=61b20c2e11&badge=0&autopause=0&player_id=0&app_id=58479",
+    videoId: "WUvtM1MnCI0",
     width: "",
     height: "",
   });
@@ -65,7 +65,7 @@ function Section1() {
   return (
     <div className="w-full py-5 md:min-h-[400px] bg-[#174067] flex flex-col md:flex-row md:text-left text-center md:gap-5 justify-between items-center">
       <div className="rounded-lg overflow-hidden md:pl-16">
-        <VimeoEmbed
+        <YouTubeEmbed
           videoId={videoOpts.videoId}
           width={videoOpts.width}
           height={videoOpts.height}
