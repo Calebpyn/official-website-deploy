@@ -2,17 +2,15 @@
 
 //Types
 import { videoType } from "../../types/homepage/Section1Types";
-import VimeoEmbed from "../common/VimeoEmbed";
 
 //Components
-// import YouTubeEmbed from "../common/YoutubeEmbed";
+import YouTubeEmbed from "../common/YoutubeEmbed";
 
 //Imports
 import { useEffect, useState } from "react";
 
 //Translation
 import { useTranslation } from "react-i18next";
-import YouTubeEmbed from "../common/YoutubeEmbed";
 
 function Section1() {
   //Translation
