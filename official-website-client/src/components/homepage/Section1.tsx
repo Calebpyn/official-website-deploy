@@ -62,7 +62,7 @@ function Section1() {
 
   return (
     <div className="w-full py-5 md:min-h-[400px] bg-[#174067] flex flex-col md:flex-row md:text-left text-center md:gap-5 justify-between items-center">
-      <div className="rounded-lg overflow-hidden md:pl-16">
+      <div className="rounded-lg overflow-hidden md:ml-16">
         <YouTubeEmbed
           videoId={videoOpts.videoId}
           width={videoOpts.width}
