@@ -44,7 +44,7 @@ function Section1() {
           </div>
           <div className="w-full flex flex-col gap-16 justify-center items-center mt-16">
             <span>
-              Whatsapp: Justin Mcentee- (760-315-0576)
+              Whatsapp: Justin McEntee- (760-315-0576)
               <br />
               Gabriela Victorica McEntee- (646-183-9897)
             </span>
