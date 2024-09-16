@@ -8,7 +8,7 @@ function Section6() {
   const { t } = useTranslation();
   return (
     <div className="w-full bg-white p-16">
-      <div className="flex flex-col gap-10 text-justify">
+      <div className="flex flex-col gap-10 md:text-justify text-left">
         <div className="flex flex-col items-center gap-10 text-2xl">
           <span className="font-bold lg:text-3xl md:text-2xl text-xl">
             {t("title_pm_s6_1")}
@@ -18,7 +18,7 @@ function Section6() {
             <span className="md:w-1/2">{t("content_pm_s6_2")}</span>
           </div>
         </div>
-        <div className="flex flex-col items-center w-full gap-10 text-justify text-2xl">
+        <div className="flex flex-col items-center w-full gap-10 md:text-justify text-left text-2xl">
           <span className="font-bold lg:text-3xl md:text-2xl text-xl">
             {t("title_pm_s6_2")}
           </span>

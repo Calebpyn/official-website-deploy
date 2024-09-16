@@ -20,13 +20,13 @@ function Section4() {
           </span>
         </div>
         <div className="flex md:gap-16 gap-8 justify-between items-start md:flex-row flex-col">
-          <div className="md:w-1/2 flex justify-start flex-col lg:text-2xl md:text-xl text-base md:text-left text-justify gap-5 md:gap-0">
+          <div className="md:w-1/2 flex justify-start flex-col lg:text-2xl md:text-xl text-base text-left gap-5 md:gap-0">
             <span className="font-black md:min-h-[120px]">
               {t("title_pm_s4_2")}
             </span>
             <p className="">{t("content_pm_s4_2")}</p>
           </div>
-          <div className="md:w-1/2 flex justify-start flex-col lg:text-2xl md:text-xl text-base md:text-left text-justify gap-5 md:gap-0">
+          <div className="md:w-1/2 flex justify-start flex-col lg:text-2xl md:text-xl text-base text-left gap-5 md:gap-0">
             <span className="font-black md:min-h-[120px]">
               {t("title_pm_s4_3")}
             </span>
@@ -34,13 +34,13 @@ function Section4() {
           </div>
         </div>
         <div className="flex md:gap-16 gap-8 justify-between items-start md:flex-row flex-col">
-          <div className="md:w-1/2 flex justify-start flex-col lg:text-2xl md:text-xl text-base md:text-left text-justify gap-5 md:gap-0">
+          <div className="md:w-1/2 flex justify-start flex-col lg:text-2xl md:text-xl text-base text-left gap-5 md:gap-0">
             <span className="font-black md:min-h-[120px]">
               {t("title_pm_s4_4")}
             </span>
             <p>{t("content_pm_s4_4")}</p>
           </div>
-          <div className="md:w-1/2 flex justify-start flex-col lg:text-2xl md:text-xl text-base md:text-left text-justify gap-5 md:gap-0">
+          <div className="md:w-1/2 flex justify-start flex-col lg:text-2xl md:text-xl text-base text-left gap-5 md:gap-0">
             <span className="font-black md:min-h-[120px]">
               {t("title_pm_s4_5")}
             </span>

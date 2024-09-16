@@ -51,7 +51,7 @@ function Section1() {
     <div className="py-10 w-full flex justify-center items-center bg-white md:flex-row flex-col">
       <div className="md:w-[30%] px-5 mb-8 md:mb-0 md:px-0 flex flex-col justify-start items-start mr-10 gap-5">
         <div className="w-full flex justify-start items-center">
-          <span className="text-[#FF9B3B]">{t("coming_to_baja")}</span>
+          <span className="text-[#FF9B3B] text-4xl">{t("coming_to_baja")}</span>
         </div>
         <div className="w-full flex justify-start items-center">
           <span className="text-black text-3xl font-bold">
@@ -59,7 +59,7 @@ function Section1() {
           </span>
         </div>
         <div className="w-full flex justify-start items-center">
-          <p className="text-base font-extralight">
+          <p className="font-extralight text-2xl">
             <b className="font-bold">{t("moving_to_baja")}</b>{" "}
             {t("text_segment_1")}{" "}
             <b className="font-bold">{t("bold_text_1")}</b>
