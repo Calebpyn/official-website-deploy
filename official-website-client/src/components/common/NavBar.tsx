@@ -388,11 +388,7 @@ function NavBar() {
             className="bg-[#FDB42D] text-sm text-white flex text-center justify-center items-center py-1 rounded-full shadow-lg hover:scale-105 tr cursor-pointer max-w-[200px] w-full"
             onClick={() => window.open(contactUrl, "_blank")}
           >
-            <span>
-              {t("book")}
-              <br />
-              {t("consultation")}
-            </span>
+            <span>{t("contact")}</span>
           </div>
 
           <div className="w-[90%] bg-white bg-opacity-40 h-[1px] my-5"></div>

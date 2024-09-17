@@ -38,7 +38,7 @@ function Section1() {
       ></div>
       <div>
         <div className="bg-white w-full p-16 flex flex-col">
-          <div className="flex flex-col gap-10 text-2xl text-justify">
+          <div className="flex flex-col gap-10 text-2xl text-left md:text-justify">
             <p>{t("content_p_1")}</p>
             <p>{t("content_p_2")}</p>
           </div>
@@ -51,7 +51,7 @@ function Section1() {
 
             <span className="w-[50%] text-center">{t("content_p_3")}</span>
 
-            <span className="flex gap-5 justify-center items-center">
+            <span className="flex gap-5 justify-center items-center flex-wrap">
               <img
                 src={waIcon}
                 className="h-[50px] hover:scale-105 tr cursor-pointer"
