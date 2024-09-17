@@ -68,12 +68,14 @@ const PropertyCard: React.FC<propertyCardType> = ({
       </div>
 
       <div className="w-full flex justify-start items-start pl-3 flex-col gap-2">
-        <span className="text-sm text-zinc-700">
+        <span className="text-sm text-zinc-700 h-[100px] overflow-y-clip relative">
           {i18n.language == "es"
             ? description.es
             : i18n.language == "en"
             ? description.en
             : null}
+
+          <div className="absolute w-full h-full top-0 bg-gradient-to-b from-transparent to-white flex justify-end items-end"></div>
         </span>
         <span className="text-[#064A8D] font-semibold text-2xl">
           ${convertStringToFormattedFloat(price)} {currency}
