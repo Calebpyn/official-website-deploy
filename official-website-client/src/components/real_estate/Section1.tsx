@@ -9,7 +9,7 @@ function Section1() {
   return (
     <div className="w-full bg-white p-10">
       <div className="flex flex-col gap-10">
-        <div className="w-full text-justify text-2xl p-6">
+        <div className="w-full md:text-justify text-left text-2xl p-6">
           <p>{t("content_re_s1")}</p>
         </div>
 
@@ -18,7 +18,7 @@ function Section1() {
             {t("title_re_s1")}
           </span>
 
-          <div className="flex flex-col gap-10 text-justify">
+          <div className="flex flex-col gap-10 md:text-justify text-left">
             <div className="bg-title-blue p-6 text-white text-2xl rounded-2xl flex">
               <span className="mr-1">1.</span>
               <span>{t("content_re_s1_2")}</span>

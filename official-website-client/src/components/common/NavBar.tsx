@@ -449,7 +449,7 @@ function NavBar() {
 
               <span className="flex items-center">
                 <span className="text-white font-light text-sm mr-1">
-                  US (760) 315-576
+                  US (760) 315-0576
                 </span>
 
                 <FaPhone className="text-[#e6a146]" />
