@@ -280,7 +280,7 @@ const getAllImages = async (req, res) => {
   try {
     const { data, error } = await supabase.storage
       .from("property_images")
-      .list("public");
+      .list("public", { limit: 1000, offset: 0 });
     if (error) {
       console.error("Error fetching images:", error);
       res.status(500).json({ error: error.message });
