@@ -33,7 +33,7 @@ const PresentationCard: React.FC<PresentationCardType> = ({
           {t(`${title}`)}
         </span>
       </div>
-      <div className="h-[350px] overflow-clip rounded-md shadow-sm">
+      <div className="h-[350px] overflow-clip rounded-md shadow-sm select-none">
         <img src={image} className="" />
       </div>
 

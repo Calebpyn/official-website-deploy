@@ -3,9 +3,18 @@
 @tailwind utilities;
 
 .tr {
-    transition: all ease .3s;
+  transition: all ease 0.3s;
 }
 
 .bottom-shadow {
-    box-shadow: 0 5px 10px -10px #333;
+  box-shadow: 0 5px 10px -10px #333;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

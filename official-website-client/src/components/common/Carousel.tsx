@@ -32,8 +32,8 @@ const Carousel: React.FC<carouselType> = ({ imgArray, width, height }) => {
   };
   //Carousel logic go to an especific index.
   const gotTo = (idx: number) => {
-    setCarouselPosition(parseInt(width)*idx)
-  }
+    setCarouselPosition(parseInt(width) * idx);
+  };
 
   return (
     <div
@@ -46,7 +46,10 @@ const Carousel: React.FC<carouselType> = ({ imgArray, width, height }) => {
       >
         <div
           className={`flex tr`}
-          style={{ maxWidth: `${parseInt(width) * imgArray.length}` , translate: `-${carouselPosition}px`}}
+          style={{
+            maxWidth: `${parseInt(width) * imgArray.length}`,
+            translate: `-${carouselPosition}px`,
+          }}
         >
           {imgArray.map((img, idx) => (
             <div
@@ -72,17 +75,25 @@ const Carousel: React.FC<carouselType> = ({ imgArray, width, height }) => {
           ))}
         </div>
       </div>
-      <div className="w-full h-[30px] flex justify-center items-center">
+      <div
+        className={`h-[30px] w-[100px] flex justify-center items-center overflow-x-auto scrollbar-hide`}
+      >
         {imgArray.map((_, idx) => (
-          <BsDot
+          <div
             key={idx}
-            className={
-              carouselPosition / parseInt(width) == idx
-                ? "text-xl tr text-black cursor-pointer"
-                : "tr text-zinc-400 cursor-pointer hover:scale-150"
-            }
-            onClick={() => gotTo(idx)}
-          />
+            className={`min-w-[10px] translate-x-[${
+              carouselPosition * 10 - 10
+            }px]`}
+          >
+            <BsDot
+              className={
+                carouselPosition / parseInt(width) == idx
+                  ? "text-xl tr text-black cursor-pointer"
+                  : "tr text-zinc-400 cursor-pointer hover:scale-150"
+              }
+              onClick={() => gotTo(idx)}
+            />
+          </div>
         ))}
       </div>
     </div>
