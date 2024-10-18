@@ -68,7 +68,7 @@ const PropertyCard: React.FC<propertyCardType> = ({
       </div>
 
       <div className="w-full flex justify-start items-start pl-3 flex-col gap-2">
-        <span className="text-sm text-zinc-700 h-[100px] overflow-y-clip relative">
+        <span className="text-sm text-zinc-700 h-[100px] overflow-y-clip relative whitespace-pre-wrap">
           {i18n.language == "es"
             ? description.es
             : i18n.language == "en"

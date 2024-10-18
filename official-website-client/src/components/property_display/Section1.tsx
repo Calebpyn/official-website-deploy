@@ -124,7 +124,7 @@ const Section1: React.FC<propertyDsiplay> = ({ id }) => {
                   ) : null}
                 </div>
 
-                <p className="leading-7 text-zinc-600 font-light select-none">
+                <p className="leading-7 text-zinc-600 font-light select-none whitespace-pre-wrap">
                   {i18n.language == "en"
                     ? propertyInfo?.desc
                     : propertyInfo?.desc_es}
