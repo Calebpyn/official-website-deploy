@@ -9,18 +9,24 @@ import { useTranslation } from "react-i18next";
 
 //Icons
 import { FaAirbnb } from "react-icons/fa";
+import { useEffect } from "react";
 
 const PropertyCard: React.FC<propertyCardType> = ({
-  atts,
-  id,
-  description,
-  img,
-  price,
+  address,
+  atts_en,
+  atts_es,
   currency,
-  title,
+  desc,
+  desc_es,
+  images,
+  lat,
+  lng,
+  name,
+  name_es,
+  price,
+  type,
   width,
-  for_sale,
-  airbnb,
+  id,
 }) => {
   //Translation
   const { t, i18n } = useTranslation();
@@ -44,6 +50,7 @@ const PropertyCard: React.FC<propertyCardType> = ({
       maximumFractionDigits: 2,
     });
   }
+
   return (
     <div
       className="flex flex-col justify-start items-center p-5 gap-2 hover:scale-105 tr cursor-pointer hover:shadow-lg rounded-md"
@@ -51,12 +58,8 @@ const PropertyCard: React.FC<propertyCardType> = ({
       onClick={() => navigate(`/real_estate/${id}`)}
     >
       <span className="w-full flex justify-between items-center text-2xl">
-        {i18n.language == "es"
-          ? title.es
-          : i18n.language == "en"
-          ? title.en
-          : null}
-        {airbnb ? (
+        {i18n.language == "es" ? name_es : i18n.language == "en" ? name : null}
+        {type == "AirBnB" ? (
           <span className="flex items-center gap-1 bg-[#FF5A5F] rounded-full text-white px-3">
             AirBnB <FaAirbnb />
           </span>
@@ -64,36 +67,43 @@ const PropertyCard: React.FC<propertyCardType> = ({
       </span>
 
       <div className="h-[300px] overflow-hidden flex justify-center items-center">
-        <img src={img} className="w-full rounded-md" />
+        <img src={images[0]} className="w-full rounded-md" />
       </div>
 
       <div className="w-full flex justify-start items-start pl-3 flex-col gap-2">
         <span className="text-sm text-zinc-700 h-[100px] overflow-y-clip relative whitespace-pre-wrap">
           {i18n.language == "es"
-            ? description.es
+            ? desc_es
             : i18n.language == "en"
-            ? description.en
+            ? desc
             : null}
 
           <div className="absolute w-full h-full top-0 bg-gradient-to-b from-transparent to-white flex justify-end items-end"></div>
         </span>
         <span className="text-[#064A8D] font-semibold text-2xl">
           ${convertStringToFormattedFloat(price)} {currency}
-          {for_sale ? null : ` ${t("per_month")}`}
+          {type == "For Sale" ? null : ` ${t("per_month")}`}
         </span>
         <span className="-ml-2">
-          {atts.map((item, idx) => (
-            <span
-              key={idx}
-              className="px-2 text-zinc-400 border-r-zinc-400 border-r-[1px]"
-            >
-              {i18n.language == "es"
-                ? item.es
-                : i18n.language == "en"
-                ? item.en
-                : null}
-            </span>
-          ))}
+          {i18n.language == "en"
+            ? atts_en.map((item, idx) => (
+                <span
+                  key={idx}
+                  className="px-2 text-zinc-400 border-r-zinc-400 border-r-[1px]"
+                >
+                  {item}
+                </span>
+              ))
+            : i18n.language == "es"
+            ? atts_es.map((item, idx) => (
+                <span
+                  key={idx}
+                  className="px-2 text-zinc-400 border-r-zinc-400 border-r-[1px]"
+                >
+                  {item}
+                </span>
+              ))
+            : null}
         </span>
       </div>
     </div>

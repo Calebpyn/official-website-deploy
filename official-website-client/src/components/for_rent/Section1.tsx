@@ -39,6 +39,7 @@ function Section1() {
   useEffect(() => {
     handleAllForSale();
   }, []);
+
   return (
     <div className="w-full bg-white">
       {isLoading ? (
@@ -49,24 +50,22 @@ function Section1() {
         <div className="w-full bg-white p-5 flex-wrap flex justify-around">
           {allProperties.map((item: propertyDisplayType) => (
             <PropertyCard
-              airbnb={item.type == "AirBnB"}
-              id={item.id}
               key={item.id}
-              atts={item.atts}
-              description={{
-                es: item.desc_es,
-                en: item.desc,
-              }}
-              img={item.images[0]}
+              address={item.address}
+              atts_en={item.atts_en}
+              id={item.id}
+              width="600"
+              name={item.name}
+              name_es={item.name_es}
+              desc={item.desc}
+              desc_es={item.desc_es}
+              type={item.type}
               price={item.price}
               currency={item.currency}
-              title={{
-                es: item.name_es,
-                en: item.name,
-              }}
-              width="600"
-              for_sale={true}
-              pets={true}
+              atts_es={item.atts_es}
+              images={item.images}
+              lat={item.lat}
+              lng={item.lng}
             />
           ))}
         </div>
