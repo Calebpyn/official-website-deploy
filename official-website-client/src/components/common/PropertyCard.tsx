@@ -9,18 +9,14 @@ import { useTranslation } from "react-i18next";
 
 //Icons
 import { FaAirbnb } from "react-icons/fa";
-import { useEffect } from "react";
 
 const PropertyCard: React.FC<propertyCardType> = ({
-  address,
   atts_en,
   atts_es,
   currency,
   desc,
   desc_es,
   images,
-  lat,
-  lng,
   name,
   name_es,
   price,
